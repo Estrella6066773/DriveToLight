@@ -4,7 +4,7 @@
 #
 # 版本分工（对齐《机魂》）：
 #   Plastic UVC：Assets/、ProjectSettings/、Docs/程序设计/
-#   Git：Docs/系统设计/、Docs/设定/、Docs/_templates/、Docs/白板/、Docs/规范/、配置等
+#   Git：Docs/系统设计/、Docs/设定/、Docs/_templates/、Docs/草稿/、Docs/规范/、配置等
 
 /[Aa]ssets/
 /[Pp]roject[Ss]ettings/
