@@ -1,0 +1,123 @@
+# Unity 项目 Git 忽略规则
+# 基于 https://github.com/github/gitignore/blob/main/Unity.gitignore
+# 并与项目 ignore.conf（Plastic SCM / Unity Version Control）对齐
+#
+# 版本分工（对齐《机魂》）：
+#   Plastic UVC：Assets/、ProjectSettings/、Docs/程序设计/
+#   Git：Docs/系统设计/、Docs/设定/、Docs/_templates/、Docs/白板/、Docs/规范/、配置等
+
+/[Aa]ssets/
+/[Pp]roject[Ss]ettings/
+
+# Unity 缓存与生成目录
+.utmp/
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+*.log
+
+# Blender 备份
+*.blend1
+*.blend1.meta
+
+# 内存快照与录屏（体积大，可能含敏感数据）
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+
+# Asset Store Tools（按需取消注释）
+# /[Aa]ssets/AssetStoreTools*
+
+# JetBrains Rider
+/[Aa]ssets/Plugins/Editor/JetBrains*
+*.DotSettings.user
+
+# Visual Studio / Gradle
+.vs/
+.gradle/
+.vscode/
+
+# 自动生成的 IDE 工程文件
+ExportedObj/
+.consulo/
+*.csproj
+*.unityproj
+*.sln
+*.slnx
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Unity 生成的 meta
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# 崩溃与 Mono
+sysinfo.txt
+mono_crash.*
+crashlytics-build.properties
+
+# 构建产物
+*.apk
+*.aab
+*.unitypackage
+*.unitypackage.meta
+*.app
+
+# TestRunner
+InitTestScene*.unity*
+
+# Addressables
+/ServerData
+/[Aa]ssets/StreamingAssets/aa*
+/[Aa]ssets/AddressableAssetsData/link.xml*
+/[Aa]ssets/Addressables_Temp*
+/[Aa]ssets/AddressableAssetsData/*/*.bin*
+
+# Visual Scripting 自动生成
+/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db
+/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db.meta
+/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Core/Property Providers
+/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Core/Property Providers.meta
+
+# Play Mode 测试场景
+/[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
+
+# 场景依赖缓存
+/[Aa]ssets/[Ss]ceneDependencyCache*
+
+# Plastic SCM / Unity Version Control（Git 不提交）
+.plastic/
+*.private
+*.private.meta
+
+# Plastic SCM 插件（若存在）
+/[Aa]ssets/Plugins/PlasticSCM*
+
+# Unity 目录监视临时文件
+~UnityDirMonSyncFile~*
+
+# 操作系统
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Cursor IDE 本地配置（个人 / 本机 AI 规则，不纳入 Git）
+.cursor/
