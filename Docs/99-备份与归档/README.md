@@ -18,4 +18,4 @@
 
 | 文件 | 归档原因 | 日期 |
 |------|----------|------|
-| [数据表-PlayerState-旧版追光者.md](数据表-PlayerState-旧版追光者.md) | 旧版“追光者”玩法遗留，含 `CurrentLight`、`UnlockedAbilities` 等字段，与当前移动城市/人造太阳/四类资源设计不符 | 2026-06-21 |
+| [数据表-PlayerState-旧版追光者.md](数据表-PlayerState-旧版追光者.md) | 旧版“追光者”玩法遗留，含 `CurrentLight`、`UnlockedAbilities` 等字段，与当前移动城市/太阳/四类资源设计不符 | 2026-06-21 |
