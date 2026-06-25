@@ -14,15 +14,15 @@
 
 ## 无敌骄阳会
 
-![无敌骄阳会组织与军队参考（Familiar Lands · basedbinkie）](./无敌骄阳会.jpg)
+![无敌骄阳会组织与军队参考（Familiar Lands · basedbinkie）](./无敌骄阳会参考.jpg)
 
 词条：[无敌骄阳会](../02-角色与势力/无敌骄阳会.md#视觉参考) · *Familiar Lands* / basedbinkie
 
 ---
 
-## 铁壳、日生之地参考
+## 铁壳与日生之地参考
 
-![荒地、铁壳、猎壳人场景参考（Fall of the Iron Gods）](./铁壳、日生之地参考.jpg)
+![荒地、铁壳、猎壳人场景参考（Fall of the Iron Gods）](./铁壳与日生之地参考.jpg)
 
 词条：[荒地](../03-地点与场景/荒地.md#视觉参考)、[铁壳](../02-角色与势力/铁壳.md#视觉参考)、[猎壳人](../02-角色与势力/猎壳人.md#视觉参考) · *Fall of the Iron Gods*
 
