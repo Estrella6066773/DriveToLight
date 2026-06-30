@@ -17,6 +17,21 @@
 | [回合与行动数据结构](./回合与行动数据结构.md) | 回合阶段、行动表、与指令队列分工 | [回合与行动表](../../02-系统设计/07-玩法循环/回合与行动表.md) |
 | [通讯与视野同步数据结构](./通讯与视野同步数据结构.md) | 即时通讯、飞信、待同步队列 | [通讯与飞信系统](../../02-系统设计/06-单位与交战/通讯与飞讯系统.md) |
 
+## 口粮周总结数据结构
+
+权威规则见 [口粮与周总结（草稿）](../../01-草稿/口粮与周总结/README.md)（**无饥饿版**）。
+
+| 结构 / 接口 | 说明 |
+|-------------|------|
+| `FoodAllocationResult` | 本周期 Fed / Unfed / Death / SurvivingUnfed（**无**跨周 cohort） |
+| `AllocationSortKey` | 整数口粮离散分配与减员排序键 |
+| `FoodWarehouseDrawdown` | 「优先用于充饥」两阶段均分扣减 |
+| `IFoodAllocationRuleOverride` | 领袖/归属能力 Override 单管线 |
+| `EscortAccompanyingState` | 随行人员（废止载荷迁徙人口） |
+| `FoodSufficiencyStatus` | 常驻 UI 每回合充足性（只读模拟） |
+
+**废止**：`PopulationHungerCohort`、`WasHungryLastWeek`、`SyncDistrictHungerProjection`、`State.Hunger`；`save_gameplay_options.team_food_upkeep_enabled`（每回合队伍扣粮，见 [回合与行动数据结构 · 废止字段](./回合与行动数据结构.md#废止字段勿实现新逻辑)）。
+
 ## 后续规划数据表
 
 | 数据表 | 说明 | 关联设计 |
@@ -35,3 +50,5 @@
 | 2026-06-21 | 0.0.1 | 初稿；说明当前无数据表，列出后续规划 |
 | 2026-06-22 | 0.0.2 | 新增《队伍与战斗数据结构》 |
 | 2026-06-22 | 0.0.3 | 新增回合与行动、通讯与视野同步数据表；移除已与战斗表重复的「队伍表」规划项 |
+| 2026-06-30 | 0.0.4 | 口粮周总结数据结构；废止 PopulationHungerCohort |
+| 2026-06-30 | 0.0.5 | 废止 `team_food_upkeep_enabled`；链回合与行动数据结构 |

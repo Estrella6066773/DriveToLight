@@ -46,6 +46,19 @@
 | `State.InDarkZone` | 位于暗渊带 |
 | `Buff.Wall` | 城墙 Buff 生效 |
 
+> **废止**：`State.Hunger` 及饥饿 cohort 的 GAS 投影**不**纳入本管线；口粮减员由周总结 `FoodAllocationResult` 处理（见 [口粮与周总结（草稿）](../../../01-草稿/口粮与周总结/README.md)）。
+
+## 口粮分配 Override（规划）
+
+领袖能力、人口归属能力可注册 **`IFoodAllocationRuleOverride`**，在周总结口粮分配中**优先执行一轮**（先于 L1→L2→L3 默认比例均分）。示例：**工作者优先**能力（`WorkerPriorityOverride`）——在作用域内先为参与工作的人口配给，剩余 stock 与人口再走默认规则。
+
+| 接口 | 职责 |
+|------|------|
+| `IFoodAllocationRuleOverride` | 修改 `stock`；对覆盖人口独立完成分到/未分到/减员 |
+| `DefaultProportionalDistrictRule` | L1 城区占比 → L2 归属占比 → L3 同比例 |
+
+数据结构与程序占位见 [03-数据字典 · 口粮周总结数据结构](./03-数据字典/README.md#口粮周总结数据结构)。
+
 ## Attribute 注册表（首版）
 
 | Attribute | 说明 |
@@ -101,3 +114,4 @@ flowchart TD
 | 日期 | 版本 | 说明 |
 |------|------|------|
 | 2026-06-29 | 0.0.1 | GAS-lite 定案：GE + Tag + GA + AttributeSet 统一管线 |
+| 2026-06-30 | 0.0.2 | 废止 State.Hunger；增 IFoodAllocationRuleOverride 规划 |
