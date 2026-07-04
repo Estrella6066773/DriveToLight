@@ -8,7 +8,7 @@
 
 ![骄阳之子角色参考（Familiar Lands · basedbinkie）](./骄阳之子？.jpg)
 
-词条：[骄阳之子](../02-角色与势力/骄阳之子.md#视觉参考) · *Familiar Lands* / basedbinkie
+词条：[骄阳之子](../02-角色与势力/城市领袖/骄阳之子.md#视觉参考) · *Familiar Lands* / basedbinkie
 
 ---
 
