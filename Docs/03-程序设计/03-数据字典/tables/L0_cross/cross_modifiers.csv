@@ -1,0 +1,4 @@
+modifier_id,priority,when_layer,when_ids,require_layer,require_ids,stat_key,op,value,status,notes_zh
+cross_watchtower_dense_wood,30,environment,dense_woodland,facility,watchtower,watchtower_vision_pct,add,,pending,密林削弱哨塔
+cross_watchtower_hill,40,terrain,hill,facility,watchtower,watchtower_vision_pct,add,,pending,丘陵强化哨塔
+cross_watchtower_mountain,50,terrain,mountain,facility,watchtower,watchtower_vision_pct,add,,pending,山地强化高于丘陵

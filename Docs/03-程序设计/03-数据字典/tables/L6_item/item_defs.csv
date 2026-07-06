@@ -1,0 +1,6 @@
+item_id,display_name_zh,category,stack_hex_max,stack_warehouse_max,weight_per_unit,pickup_requires_team,status,notes_zh
+metal,金属,resource,,,,true,pending,
+food,食物,resource,,,,true,pending,
+energy,能源,resource,,,,true,pending,
+population_unit,人口单位,resource,,,,false,pending,
+equipment_generic,装备组占位,asset,,,,true,pending,

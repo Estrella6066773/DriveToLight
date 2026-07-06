@@ -1,9 +1,0 @@
-profile_id,environment_type_id,environment_subtype,stack_rule,path_cost_delta,unit_enter_allowed_override,vision_radius_modifier_pct,watchtower_vision_modifier_pct,default_duration_turns,facility_build_mode_override,granted_tags_json,notes_zh
-environment_profile_woodland,woodland,ground_surface,exclusive,0,,0,0,,,Env.Woodland,树林；路径不加成
-environment_profile_dense_woodland,dense_woodland,ground_surface,exclusive,1,,,pending,,,Env.DenseWoodland,密林；削弱哨塔视野（modifier 待定）
-environment_profile_scorched_earth,scorched_earth,ground_surface,exclusive,0,,0,0,,,Env.ScorchedEarth,焦土
-environment_profile_crater,crater,ground_surface,exclusive,1,,0,0,,,Env.Crater,弹坑；路径+1 待定
-environment_profile_sandstorm,sandstorm,weather,regional,1,,pending,pending,pending,,Env.Sandstorm,沙暴；数值待定
-environment_profile_heavy_rain,heavy_rain,weather,regional,0,,pending,pending,pending,,Env.HeavyRain,暴雨；数值待定
-environment_profile_fog,fog,weather,regional,0,,pending,pending,pending,,Env.Fog,迷雾；数值待定
-environment_profile_mobile_city_track,mobile_city_track,city_trace,stackable,0,,0,0,pending,,Env.MobileCityTrack,移动城市轨迹；留存回合待定

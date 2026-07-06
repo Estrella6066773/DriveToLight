@@ -1,6 +1,0 @@
-item_type_id,display_name_zh,profile_id,item_category,max_stack_per_hex,max_stack_in_warehouse,config_status,notes_zh
-metal,金属,item_profile_metal,resource,pending,pending,pending,
-food,食物,item_profile_food,resource,pending,pending,pending,
-energy,能源,item_profile_energy,resource,pending,pending,pending,
-population_unit,人口单位,item_profile_population_unit,resource,pending,pending,pending,
-equipment_generic,装备组占位,item_profile_equipment_generic,asset,pending,pending,pending,

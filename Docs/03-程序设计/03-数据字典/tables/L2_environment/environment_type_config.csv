@@ -1,9 +1,0 @@
-environment_type_id,display_name_zh,profile_id,environment_subtype,stack_rule,path_cost_delta,config_status,notes_zh
-woodland,树林,environment_profile_woodland,ground_surface,exclusive,0,defined,
-dense_woodland,密林,environment_profile_dense_woodland,ground_surface,exclusive,1,pending,哨塔视野削弱待定
-scorched_earth,焦土,environment_profile_scorched_earth,ground_surface,exclusive,0,defined,
-crater,弹坑,environment_profile_crater,ground_surface,exclusive,1,pending,
-sandstorm,沙暴,environment_profile_sandstorm,weather,regional,1,pending,
-heavy_rain,暴雨,environment_profile_heavy_rain,weather,regional,0,pending,
-fog,迷雾,environment_profile_fog,weather,regional,0,pending,
-mobile_city_track,移动城市轨迹,environment_profile_mobile_city_track,city_trace,stackable,0,pending,留存规则待定

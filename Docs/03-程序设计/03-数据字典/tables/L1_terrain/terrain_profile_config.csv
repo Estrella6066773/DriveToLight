@@ -1,7 +1,0 @@
-profile_id,terrain_type_id,unit_path_cost_equiv,unit_enter_allowed,facility_build_mode,facility_build_allow_type_ids,mobile_city_passability,mobile_city_path_cost_equiv,terrain_transform_ability_id,granted_tags_json,notes_zh
-terrain_profile_plain,plain,1,true,all,,passable,,,Terrain.Plain,单位与移动城市路径等效1格；可建全部设施类别
-terrain_profile_hill,hill,2,true,auxiliary_only,,passable,,GA_TerrainFlattenToPlain,Terrain.Hill,仅辅助类；丘陵平整为平原走 GA_TerrainFlattenToPlain
-terrain_profile_mountain,mountain,5,true,none,tunnel,passable,,,Terrain.Mountain,基线路径5、全部禁止；隧道有效时由 tunnel 设施配置覆盖
-terrain_profile_river,river,4,false,none,bridge,crossable,,,Terrain.River,一般单位不可进入停留；桥梁有效时由 bridge 设施配置恢复通行
-terrain_profile_rift,rift,1,false,none,bridge,crossable,,,Terrain.Rift,同河流；桥梁有效时由 bridge 设施配置恢复通行
-terrain_profile_swamp,swamp,3,true,none,,passable,,,Terrain.Swamp,路径3；全部禁止建造；资源点白名单仍可覆盖

@@ -1,5 +1,0 @@
-resource_point_type_id,display_name_zh,facility_build_allow_type_ids,facility_build_allow_rule_ids,notes_zh
-village,村镇,recruitment_office,allow_recruitment_office,白名单覆盖该格地形基础档位
-mine,矿藏,mine_extraction,allow_mine_extraction,白名单覆盖该格地形基础档位
-orchard,果地,orchard_station,allow_orchard_station,白名单覆盖该格地形基础档位
-relic,遗迹,energy_station,allow_energy_station,遗迹本体不可重建；仅允许能源站

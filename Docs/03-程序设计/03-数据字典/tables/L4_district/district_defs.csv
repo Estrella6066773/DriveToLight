@@ -1,0 +1,6 @@
+district_id,display_name_zh,category,base_resident_cap,load_step_grids,load_repair_cost,load_repair_kind,facility_slots,ruins_threshold_pct,ruins_allows_work,status,notes_zh
+core,核心区,special,,,,metal,0,20,false,pending,骄阳之心
+general,一般城区,general,,,,metal,,20,false,pending,
+dry_dock,城坞,special,,,,metal,0,20,false,pending,
+comm_station,通讯站,special,,,,metal,0,20,false,pending,
+ruins_generic,废墟城区,general,0,,,metal,,20,false,pending,状态废墟占位待定

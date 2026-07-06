@@ -1,0 +1,33 @@
+enum_group,enum_key,display_name_zh,definition_zh,sort_order
+build_mode,all,全部允许,占格类+辅助类+地形类均可建（仍受 facility rule_guard 约束）,1
+build_mode,auxiliary_only,仅辅助类,阻断生产/仓储与地形类,2
+build_mode,none,全部禁止,阻断一般建造；build_allow_facility_ids 可覆盖,3
+mobile_city_pass,passable,可通过,可正常经行占格；城区可全部落在此类格,1
+mobile_city_pass,crossable,可跨越,可部分格通过；禁止全部连接城区同落此类格,2
+mobile_city_pass,blocked,不可通过,不可经行占格,3
+environment_subtype,ground_surface,地面表层,树林焦土弹坑等格面覆盖,1
+environment_subtype,weather,天气区域,沙暴暴雨迷雾等区域大气,2
+environment_subtype,city_trace,城市轨迹,移动城市经过痕迹,3
+environment_stack,exclusive,互斥,同子类不可叠；新替旧,1
+environment_stack,stackable,可叠,允许多实例或强度叠层,2
+environment_stack,regional,区域,可覆盖多格,3
+resource_reveal,hidden,隐藏,未揭示,1
+resource_reveal,kind,揭示种类,已知资源点类型,2
+resource_reveal,amount,揭示储量,已知储量数值,3
+district_category,special,特殊城区,自带固定城市能力,1
+district_category,general,一般城区,提供设施建造位,2
+district_state,normal,正常,可工作可迁入,1
+district_state,ruins,废墟,不可工作不可迁入,2
+facility_category,occupying,占格类,占用建造位主功能,1
+facility_category,auxiliary,辅助类,视野陷阱城墙等辅助,2
+facility_subtype,terrain,地形类,改变宿主格通行地貌,1
+facility_subtype,production,生产类,工作驱动转化,2
+facility_subtype,storage,仓储类,提升存储上限,3
+facility_subtype,dwelling,屋舍,叠加居民承载,4
+production_tier,reserve_to_resource,储量转化,资源层储量→资源物品,1
+production_tier,resource_to_asset,物品转化,资源物品→资产物品,2
+item_category,resource,资源物品,金属食物能源等,1
+item_category,asset,资产物品,装备组等,2
+item_category,equipment,装备,队伍装备,3
+record_status,defined,已定,可导入,1
+record_status,pending,待定,数值或未评审,2

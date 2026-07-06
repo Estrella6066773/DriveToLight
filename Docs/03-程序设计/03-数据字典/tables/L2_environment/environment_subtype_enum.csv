@@ -1,4 +1,0 @@
-subtype_id,display_name_zh,definition_zh,example_type_ids
-ground_surface,地面表层,附着在格面的植被、灼烧、弹坑等覆盖,woodland;dense_woodland;scorched_earth;crater
-weather,天气与区域大气,沙暴、暴雨、迷雾等区域或格级大气效果,sandstorm;heavy_rain;fog
-city_trace,城市轨迹,移动城市经过留下的环境痕迹,mobile_city_track

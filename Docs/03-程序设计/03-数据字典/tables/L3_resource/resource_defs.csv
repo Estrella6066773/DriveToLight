@@ -1,0 +1,5 @@
+resource_id,display_name_zh,reserve_kind,build_allow_facility_ids,rebuildable,reveal_default,reserve_min,reserve_max,extract_work_type,status,notes_zh
+village,村镇,population,recruitment_office,true,hidden,,,extract_reserve,pending,储量形态待定
+mine,矿藏,metal,mine_extraction,true,hidden,,,extract_reserve,pending,
+orchard,果地,food,orchard_station,true,hidden,,,extract_reserve,pending,
+relic,遗迹,energy,energy_station,false,hidden,,,extract_reserve,defined,本体不可重建

@@ -1,0 +1,9 @@
+environment_id,display_name_zh,subtype,stack_rule,path_cost_delta,unit_enter_override,vision_radius_pct,watchtower_vision_pct,duration_turns,build_mode_override,tags,status,notes_zh
+woodland,树林,ground_surface,exclusive,0,,0,0,,,Env.Woodland,defined,
+dense_woodland,密林,ground_surface,exclusive,1,,,,,,Env.DenseWoodland,pending,削弱哨塔见 cross_modifiers
+scorched_earth,焦土,ground_surface,exclusive,0,,0,0,,,Env.ScorchedEarth,defined,
+crater,弹坑,ground_surface,exclusive,1,,0,0,,,Env.Crater,pending,
+sandstorm,沙暴,weather,regional,1,,,,,,Env.Sandstorm,pending,
+heavy_rain,暴雨,weather,regional,0,,,,,,Env.HeavyRain,pending,
+fog,迷雾,weather,regional,0,,,,,,Env.Fog,pending,
+mobile_city_track,移动城市轨迹,city_trace,stackable,0,,0,0,,,Env.MobileCityTrack,pending,留存回合待定

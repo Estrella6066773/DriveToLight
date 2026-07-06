@@ -1,0 +1,6 @@
+stack_order,source_kind,source_ref,description_zh
+10,layer_defs,L1_terrain,地形格基线
+20,layer_defs,L2_environment,环境修正（path_cost_delta 等）
+30,facility_host,L5_facility,地形类设施有效时覆盖宿主格
+40,build_allow,inline,build_allow_facility_ids / build_allow_facility_ids 白名单
+50,cross_modifier,L0_cross,cross_modifiers 按 priority 叠算

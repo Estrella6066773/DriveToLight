@@ -1,4 +1,4 @@
-﻿> 状态：草稿
+> 状态：草稿
 > 校验状态：待校验
 > 对应规范：[SO配置与能力通道规范](../../00-规范/SO配置与能力通道规范.md)
 
@@ -42,7 +42,7 @@
 | `Capability.Build.ProductionStorage` | 可建生产/仓储占格类 |
 | `Capability.Build.Terrain` | 可建地形类设施 |
 | `Capability.Build.Auxiliary` | 可建辅助类设施 |
-| `Allow.Build.{facility_type_id}` | **允许设施**；优先级高于地形基础档位 |
+| `Allow.Build.{facility_id}` | **允许设施**；优先级高于地形基础档位 |
 | `Capability.TransportCargo` | 可执行搬运 |
 | `Capability.District.Academy` | 可激活学院城区能力 |
 | `Capability.District.Cannon` | 可激活巨炮城区能力 |
@@ -72,11 +72,11 @@
 | `vision_range` | 视野范围 |
 | `defender_loss_reduction` | 防守方人口损失倍率 |
 | `headcount_ratio` | 当前人数比 |
-| `terrain_path_cost_equiv` | 地形格路径等效格数（hex ASC；见 [地形 capability 目录](../03-数据字典/tables/L1_terrain/terrain_capability_catalog.csv)） |
+| `terrain_path_cost_equiv` | 地形格路径等效格数（hex ASC；见 [地形 capability 目录](../03-数据字典/tables/_program/ge_catalog.csv)） |
 
 ## 地形格 ASC（hex）
 
-地图格地形层初始化时，按 [terrain_profile_config.csv](../03-数据字典/tables/L1_terrain/terrain_profile_config.csv) 向 **hex `AbilitySystemComponent`** 注册 GA、Apply GE、授予 Tag。能力目录见 [terrain_capability_catalog.csv](../03-数据字典/tables/L1_terrain/terrain_capability_catalog.csv)。
+地图格地形层初始化时，按 [terrain_profile_config.csv](../03-数据字典/tables/L1_terrain/terrain_defs.csv) 向 **hex `AbilitySystemComponent`** 注册 GA、Apply GE、授予 Tag。能力目录见 [terrain_capability_catalog.csv](../03-数据字典/tables/_program/ge_catalog.csv)。
 
 ### 地形 Tag（首版）
 
@@ -96,7 +96,7 @@
 |----------------|-------|------|
 | `TryTerrainFlatten` | `GA_TerrainFlattenToPlain` | 丘陵平整为平原 |
 | `TryBuild` | `TeamCommandKind.BuildFacility` | 建造设施；先查 `Allow.Build.*` |
-| `EvaluateMobileCityCrossableFootprint` | `GA_TerrainRule_MobileCityCrossRift` | `mobile_city_passability=crossable` 时校验城区 footprint |
+| `EvaluateMobileCityCrossableFootprint` | `GA_TerrainRule_MobileCityCrossRift` | `mobile_city_pass=crossable` 时校验城区 footprint |
 
 ```mermaid
 flowchart TD
