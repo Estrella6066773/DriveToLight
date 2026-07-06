@@ -1,0 +1,7 @@
+allow_rule_id,facility_type_id,display_name_zh,rule_priority,gameplay_effect_id,granted_tag,source_zh,notes_zh
+allow_bridge,bridge,桥梁,100,GE_FacilityAllow_Bridge,Allow.Build.bridge,地形profile,优先级高于 facility_build_mode；几何 guard 仍须满足
+allow_tunnel,tunnel,隧道,100,GE_FacilityAllow_Tunnel,Allow.Build.tunnel,地形profile,山地等全部禁止时仍可建
+allow_recruitment_office,recruitment_office,征兵办,100,GE_FacilityAllow_RecruitmentOffice,Allow.Build.recruitment_office,资源点,覆盖该格地形基础档位
+allow_mine_extraction,mine_extraction,矿区,100,GE_FacilityAllow_MineExtraction,Allow.Build.mine_extraction,资源点,覆盖该格地形基础档位
+allow_orchard_station,orchard_station,果园,100,GE_FacilityAllow_OrchardStation,Allow.Build.orchard_station,资源点,覆盖该格地形基础档位
+allow_energy_station,energy_station,能源站,100,GE_FacilityAllow_EnergyStation,Allow.Build.energy_station,资源点,覆盖该格地形基础档位

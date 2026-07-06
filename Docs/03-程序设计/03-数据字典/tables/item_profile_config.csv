@@ -1,0 +1,6 @@
+profile_id,item_type_id,display_name_zh,item_category,max_stack_per_hex,max_stack_in_warehouse,weight_per_unit,pickup_requires_team,config_status,notes_zh
+item_profile_metal,metal,金属,resource,pending,pending,pending,true,pending,资源物品
+item_profile_food,food,食物,resource,pending,pending,pending,true,pending,
+item_profile_energy,energy,能源,resource,pending,pending,pending,true,pending,
+item_profile_population_unit,population_unit,人口单位,resource,pending,pending,pending,false,pending,招募/随行相关待定
+item_profile_equipment_generic,equipment_generic,装备组占位,asset,pending,pending,pending,true,pending,队伍资产

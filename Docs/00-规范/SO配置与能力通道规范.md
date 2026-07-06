@@ -20,7 +20,7 @@
 3. **模板组合化**
  - 队伍种类视为模板预设，本质为“初始 GE / GA 列表 + 参数配置”。
  - 模板可复用同一 GA，不同模板通过不同 GE 与参数表现差异。
- - **地形类型**同理：`terrain_profile_config` 为每类地形装配 GE/GA 列表（见 [地形类型配置数据结构](../03-程序设计/03-数据字典/地形类型配置数据结构.md)），禁止在代码中按枚举写死通行/建造规则。
+ - **地形类型**：`terrain_profile_config` 描述**格基线**；隧道/桥梁等**地形类设施**的有效时覆盖在 `FacilityTypeConfigSO` / [facility_terrain_class_config.csv](../03-程序设计/03-数据字典/tables/facility_terrain_class_config.csv)，**不**列入地形 capability 目录。
 
 4. **引擎内配置**
  - 默认由开发者在 Unity 编辑器内完成 SO 资产配置与装配。
@@ -63,4 +63,5 @@
 | 2026-06-22 | 0.0.1 | 初稿：确立“参数全部走 SO，程序只做通道与执行”为项目级实现规范 |
 | 2026-06-22 | 0.0.2 | 补充数值通道：修正来源记录、展示与预览/执行一致要求 |
 | 2026-06-29 | 0.0.3 | 能力通道升级为 GAS-lite：GameplayEffect + GameplayAbility + GameplayTag + AttributeSet |
-| 2026-07-06 | 0.0.4 | 地形 profile 组合化示例；hex ASC |
+| 2026-07-06 | 0.0.4 | 地形 profile 组合化；地形类设施覆盖归属设施 SO |
+| 2026-07-06 | 0.0.5 | 地形格基线与地形类设施基本能力分表 |

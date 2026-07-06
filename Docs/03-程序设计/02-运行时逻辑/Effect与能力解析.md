@@ -39,6 +39,10 @@
 | `Capability.ScoutScan` | 可执行侦察扫描 |
 | `Capability.ProspectScan` | 可执行勘探扫描 |
 | `Capability.Build` | 可执行建造 |
+| `Capability.Build.ProductionStorage` | 可建生产/仓储占格类 |
+| `Capability.Build.Terrain` | 可建地形类设施 |
+| `Capability.Build.Auxiliary` | 可建辅助类设施 |
+| `Allow.Build.{facility_type_id}` | **允许设施**；优先级高于地形基础档位 |
 | `Capability.TransportCargo` | 可执行搬运 |
 | `Capability.District.Academy` | 可激活学院城区能力 |
 | `Capability.District.Cannon` | 可激活巨炮城区能力 |
@@ -78,20 +82,21 @@
 
 | Tag | 说明 |
 |-----|------|
-| `Terrain.Plain` / `Terrain.Hill` / `Terrain.Mountain` / `Terrain.River` / `Terrain.Rift` / `Terrain.Swamp` | 地形种类 |
-| `Capability.Build.ProductionStorage` | 允许建生产/仓储占格类 |
-| `Capability.Build.Auxiliary` | 允许建辅助类 |
+| `Terrain.Plain` / … / `Terrain.Swamp` | 地形种类 |
+| `Capability.Build` | 建造总闸门 |
+| `Capability.Build.ProductionStorage` | 生产/仓储占格类 |
+| `Capability.Build.Terrain` | 地形类设施 |
+| `Capability.Build.Auxiliary` | 辅助类设施 |
 | `Capability.Move.Enter` | 允许进入并停留 |
-| `Blocked.Build.Auxiliary` | 辅助类建造被地形 GE 阻断 |
-| `Actor.MobileCity` | 移动城市（裂谷通行例外） |
+| `Actor.MobileCity` | 移动城市（阻断地形例外） |
 
 ### 地形 executor（首版）
 
 | `executor_key` | GA id | 说明 |
 |----------------|-------|------|
-| `TryTerrainFlatten` | `GA_TerrainFlattenToPlain` | 丘陵平整为平原；完成后重载 profile |
-| `TryBuild` | `GA_TerrainBuildTunnel` / `GA_TerrainBuildBridge` | 与设施 SO 共用建造入口 |
-| `EvaluateMobileCityRiftCrossing` | `GA_TerrainRule_MobileCityCrossRift` | 移动城市跨裂谷被动规则 |
+| `TryTerrainFlatten` | `GA_TerrainFlattenToPlain` | 丘陵平整为平原 |
+| `TryBuild` | `TeamCommandKind.BuildFacility` | 建造设施；先查 `Allow.Build.*` |
+| `EvaluateMobileCityCrossableFootprint` | `GA_TerrainRule_MobileCityCrossRift` | `mobile_city_passability=crossable` 时校验城区 footprint |
 
 ```mermaid
 flowchart TD

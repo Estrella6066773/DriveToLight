@@ -1,0 +1,5 @@
+resource_point_type_id,display_name_zh,profile_id,reserve_resource_kind,facility_build_allow_type_ids,point_rebuildable,default_reveal_level,config_status,notes_zh
+village,村镇,resource_profile_village,population,recruitment_office,true,hidden,pending,
+mine,矿藏,resource_profile_mine,metal,mine_extraction,true,hidden,pending,
+orchard,果地,resource_profile_orchard,food,orchard_station,true,hidden,pending,
+relic,遗迹,resource_profile_relic,energy,energy_station,false,hidden,defined,不可重建

@@ -1,0 +1,3 @@
+facility_type_id,display_name_zh,valid_on_host_terrain_type_ids,when_valid_override_unit_path_cost_equiv,when_valid_override_facility_build_mode,when_valid_override_unit_enter_allowed,when_valid_enable_span_connectivity,revert_on_destroy,notes_zh
+tunnel,隧道,mountain,1,auxiliary_only,,false,true,地形类设施基本能力：有效时覆盖宿主格路径与建造档位；击毁回退
+bridge,桥梁,river;rift,,,true,true,true,地形类设施基本能力：有效时恢复单位跨行与两端连通；几何见 build_rule_guard

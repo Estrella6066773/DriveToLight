@@ -1,0 +1,4 @@
+stack_rule_id,display_name_zh,definition_zh
+exclusive,互斥,同子类或同 type_id 不可叠；新实例替换旧实例
+stackable,可叠,允许多实例或强度叠层（细则待定）
+regional,区域,可覆盖多格；与格级表层分轨结算

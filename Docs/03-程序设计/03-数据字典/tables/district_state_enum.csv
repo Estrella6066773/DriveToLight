@@ -1,0 +1,3 @@
+state_id,display_name_zh,allows_work,allows_move_in,allows_move_out,notes_zh
+normal,正常,true,true,true,
+ruins,废墟,false,false,true,结构完整度低于阈值；须修复为正常

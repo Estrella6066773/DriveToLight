@@ -1,0 +1,4 @@
+passability_id,display_name_zh,definition_zh,rule_guard_zh,example_terrain_type_ids
+passable,可通过,移动城市可正常经行、占格；城区可全部落在此类格上,,plain;hill;mountain;swamp
+crossable,可跨越,移动城市可部分格通过或跨越；禁止同时让所有连接城区均落在此类格上,EvaluateMobileCityCrossableFootprint,river;rift
+blocked,不可通过,移动城市不可经行、不可占格,,

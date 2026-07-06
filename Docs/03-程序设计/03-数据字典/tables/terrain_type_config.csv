@@ -1,7 +1,7 @@
-terrain_type_id,display_name_zh,profile_id,config_status,notes_zh
-plain,平原,terrain_profile_plain,defined,
-hill,丘陵,terrain_profile_hill,defined,
-mountain,山地,terrain_profile_mountain,defined,
-river,河流,terrain_profile_river,defined,对单位路径等效4格；其余规则同裂谷
-swamp,沼泽,terrain_profile_swamp,defined,路径等效3格；禁止一切设施建造
-rift,裂谷,terrain_profile_rift,defined,几何规则见地图图层
+terrain_type_id,display_name_zh,profile_id,unit_path_cost_equiv,facility_build_mode,facility_build_allow_type_ids,unit_enter_allowed,mobile_city_passability,config_status,notes_zh
+plain,平原,terrain_profile_plain,1,all,,true,passable,defined,
+hill,丘陵,terrain_profile_hill,2,auxiliary_only,,true,passable,defined,可平整为平原
+mountain,山地,terrain_profile_mountain,5,none,tunnel,true,passable,defined,隧道有效时路径1、仅辅助类（见 facility_terrain_class_config）
+river,河流,terrain_profile_river,4,none,bridge,false,crossable,defined,移动城市可跨越
+swamp,沼泽,terrain_profile_swamp,3,none,,true,passable,defined,禁止一切设施；资源点白名单可覆盖
+rift,裂谷,terrain_profile_rift,1,none,bridge,false,crossable,defined,几何规则见地图图层

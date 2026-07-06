@@ -1,0 +1,6 @@
+profile_id,district_type_id,display_name_zh,district_category,base_resident_cap,move_grids_per_load_step,repair_resource_cost,repair_resource_kind,facility_slot_count,ruins_integrity_threshold_pct,allows_work_when_ruins,config_status,notes_zh
+district_profile_core,core,核心区,special,pending,pending,pending,metal,0,20,false,pending,骄阳之心；特殊城区
+district_profile_general,general,一般城区,general,pending,pending,pending,metal,pending,20,false,pending,可建屋舍与生产/仓储设施
+district_profile_dry_dock,dry_dock,城坞,special,pending,pending,pending,metal,0,20,false,pending,高效修复模块
+district_profile_comm_station,comm_station,通讯站,special,pending,pending,pending,metal,0,20,false,pending,即时通讯中枢
+district_profile_ruins_generic,ruins_generic,废墟城区,general,0,pending,pending,metal,0,20,false,pending,默认刷新损毁城区模板

@@ -1,0 +1,6 @@
+district_type_id,display_name_zh,profile_id,district_category,base_resident_cap,facility_slot_count,config_status,notes_zh
+core,核心区,district_profile_core,special,pending,0,pending,
+general,一般城区,district_profile_general,general,pending,pending,pending,
+dry_dock,城坞,district_profile_dry_dock,special,pending,0,pending,
+comm_station,通讯站,district_profile_comm_station,special,pending,0,pending,
+ruins_generic,废墟城区,district_profile_ruins_generic,general,0,pending,pending,状态为废墟时的占位类型待定
