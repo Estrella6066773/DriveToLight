@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "bindingId": "10fb5faf-6390-49c1-b557-3ca23cb7280d",
+  "bindingName": "循光之城",
+  "gitPath": "Docs/01-草稿/数值与关卡设计待办清单.md",
+  "feishuDocToken": "CLiAdHpzkovYEcxXaDicpoxwn1e",
+  "feishuNodeToken": "CLiAdHpzkovYEcxXaDicpoxwn1e",
+  "documentTitle": "数值与关卡设计待办清单",
+  "documentUrl": "https://feishu.cn/docx/CLiAdHpzkovYEcxXaDicpoxwn1e",
+  "importedAt": "2026-07-04T19:05:57.625Z",
+  "trigger": "schedule",
+  "source": {
+    "listApi": "drive.v1.fileComment.list",
+    "replyApi": "drive.v1.fileCommentReply.list",
+    "fileType": "docx",
+    "needReaction": true,
+    "userIdType": "open_id"
+  },
+  "commentCount": 4,
+  "replyCount": 6,
+  "comments": [
+    {
+      "comment_id": "7658608492218961105",
+      "user_id": "ou_2d7edc73341604c2326cfde1fa94d9dd",
+      "create_time": 1783158744,
+      "update_time": 1783158745,
+      "is_solved": false,
+      "solver_user_id": null,
+      "is_whole": false,
+      "quote": "无独立步兵模板",
+      "replies": [
+        {
+          "reply_id": "7658608492239916230",
+          "user_id": "ou_2d7edc73341604c2326cfde1fa94d9dd",
+          "create_time": 1783158744,
+          "update_time": 1783158744,
+          "content": {
+            "elements": [
+              {
+                "docs_link": null,
+                "person": null,
+                "text_run": {
+                  "text": "只是没有设计"
+                },
+                "type": "text_run"
+              }
+            ]
+          },
+          "extra": {
+            "image_list": []
+          }
+        }
+      ]
+    },
+    {
+      "comment_id": "7658608586330737865",
+      "user_id": "ou_2d7edc73341604c2326cfde1fa94d9dd",
+      "create_time": 1783158766,
+      "update_time": 1783158767,
+      "is_solved": false,
+      "solver_user_id": null,
+      "is_whole": false,
+      "quote": " 飞信",
+      "replies": [
+        {
+          "reply_id": "7658608586351709382",
+          "user_id": "ou_2d7edc73341604c2326cfde1fa94d9dd",
+          "create_time": 1783158766,
+          "update_time": 1783158766,
+          "content": {
+            "elements": [
+              {
+                "docs_link": null,
+                "person": null,
+                "text_run": {
+                  "text": "已废弃内容"
+                },
+                "type": "text_run"
+              }
+            ]
+          },
+          "extra": {
+            "image_list": []
+          }
+        }
+      ]
+    },
+    {
+      "comment_id": "7658609843913100476",
+      "user_id": "ou_2d7edc73341604c2326cfde1fa94d9dd",
+      "create_time": 1783159059,
+      "update_time": 1783159106,
+      "is_solved": false,
+      "solver_user_id": null,
+      "is_whole": false,
+      "quote": "活跃人口 1 口粮/人/周（城区驻留 + 队伍编制 + 随行人员）；村镇储量提取前不计",
+      "replies": [
+        {
+          "reply_id": "7658609843935710413",
+          "user_id": "ou_2d7edc73341604c2326cfde1fa94d9dd",
+          "create_time": 1783159059,
+          "update_time": 1783159059,
+          "content": {
+            "elements": [
+              {
+                "docs_link": null,
+                "person": null,
+                "text_run": {
+                  "text": "比如现在的食物：每个周期，一单位“人口”会消耗一单位“食物”，而我希望的载荷，能让一个队伍维持3个周期。"
+                },
+                "type": "text_run"
+              }
+            ]
+          },
+          "extra": {
+            "image_list": []
+          }
+        },
+        {
+          "reply_id": "7658610044912553148",
+          "user_id": "ou_2d7edc73341604c2326cfde1fa94d9dd",
+          "create_time": 1783159106,
+          "update_time": 1783159106,
+          "content": {
+            "elements": [
+              {
+                "docs_link": null,
+                "person": null,
+                "text_run": {
+                  "text": "在外长期派驻的队伍，需要由运输队输送物资。"
+                },
+                "type": "text_run"
+              }
+            ]
+          },
+          "extra": {
+            "image_list": []
+          }
+        }
+      ]
+    },
+    {
+      "comment_id": "7658624508328185011",
+      "user_id": "ou_2d7edc73341604c2326cfde1fa94d9dd",
+      "create_time": 1783162473,
+      "update_time": 1783162514,
+      "is_solved": false,
+      "solver_user_id": null,
+      "is_whole": false,
+      "quote": "实际时长 = 对照时长 / 工作效率；进行中不重算；修正仅下一项工作生效",
+      "replies": [
+        {
+          "reply_id": "7658624508346567926",
+          "user_id": "ou_2d7edc73341604c2326cfde1fa94d9dd",
+          "create_time": 1783162473,
+          "update_time": 1783162473,
+          "content": {
+            "elements": [
+              {
+                "docs_link": null,
+                "person": null,
+                "text_run": {
+                  "text": "这个说法有错误，现在的算法是积累“工作量”，使其达到指定额度。\n工作每个回合会根据算法决定本回合累计的工作量（工作量=参与人数*工作效率）\n向外显示工作进度（已累计工作流/所需工作量）和预计回合数"
+                },
+                "type": "text_run"
+              }
+            ]
+          },
+          "extra": {
+            "image_list": []
+          }
+        },
+        {
+          "reply_id": "7658624682844769478",
+          "user_id": "ou_2d7edc73341604c2326cfde1fa94d9dd",
+          "create_time": 1783162514,
+          "update_time": 1783162514,
+          "content": {
+            "elements": [
+              {
+                "docs_link": null,
+                "person": null,
+                "text_run": {
+                  "text": "无需人员参与的，人数默认为1"
+                },
+                "type": "text_run"
+              }
+            ]
+          },
+          "extra": {
+            "image_list": []
+          }
+        }
+      ]
+    }
+  ]
+}

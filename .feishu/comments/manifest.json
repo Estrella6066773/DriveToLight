@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "bindingId": "10fb5faf-6390-49c1-b557-3ca23cb7280d",
+  "bindingName": "循光之城",
+  "importedAt": "2026-07-04T19:05:57.625Z",
+  "trigger": "schedule",
+  "documentCount": 1,
+  "commentCount": 4,
+  "replyCount": 6,
+  "documents": [
+    {
+      "gitPath": "Docs/01-草稿/数值与关卡设计待办清单.md",
+      "storageFile": "Docs__01-草稿__数值与关卡设计待办清单.md.comments.json",
+      "feishuDocToken": "CLiAdHpzkovYEcxXaDicpoxwn1e",
+      "feishuNodeToken": "CLiAdHpzkovYEcxXaDicpoxwn1e",
+      "documentTitle": "数值与关卡设计待办清单",
+      "documentUrl": "https://feishu.cn/docx/CLiAdHpzkovYEcxXaDicpoxwn1e",
+      "commentCount": 4,
+      "replyCount": 6
+    }
+  ]
+}
