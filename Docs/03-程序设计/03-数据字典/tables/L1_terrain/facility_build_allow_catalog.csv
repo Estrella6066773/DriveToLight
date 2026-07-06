@@ -1,0 +1,7 @@
+allow_rule_id,facility_type_id,display_name_zh,rule_priority,gameplay_effect_id,granted_tag,notes_zh
+allow_bridge,bridge,桥梁,100,GE_FacilityAllow_Bridge,Allow.Build.bridge,地形档位为全部禁止时仍可建；须满足 build_rule_guard 几何条件
+allow_tunnel,tunnel,隧道,100,GE_FacilityAllow_Tunnel,Allow.Build.tunnel,山地等档位为全部禁止时仍可建
+allow_recruitment_office,recruitment_office,征兵办,100,GE_FacilityAllow_RecruitmentOffice,Allow.Build.recruitment_office,由资源点村镇挂载
+allow_mine_extraction,mine_extraction,矿区,100,GE_FacilityAllow_MineExtraction,Allow.Build.mine_extraction,由资源点矿藏挂载
+allow_orchard_station,orchard_station,果园,100,GE_FacilityAllow_OrchardStation,Allow.Build.orchard_station,由资源点果地挂载
+allow_energy_station,energy_station,能源站,100,GE_FacilityAllow_EnergyStation,Allow.Build.energy_station,由资源点遗迹挂载

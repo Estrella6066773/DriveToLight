@@ -1,4 +1,4 @@
-> 状态：草稿
+﻿> 状态：草稿
 > 校验状态：待校验
 > 对应规范：[SO配置与能力通道规范](../../00-规范/SO配置与能力通道规范.md)
 
@@ -72,11 +72,11 @@
 | `vision_range` | 视野范围 |
 | `defender_loss_reduction` | 防守方人口损失倍率 |
 | `headcount_ratio` | 当前人数比 |
-| `terrain_path_cost_equiv` | 地形格路径等效格数（hex ASC；见 [地形 capability 目录](../03-数据字典/tables/terrain_capability_catalog.csv)） |
+| `terrain_path_cost_equiv` | 地形格路径等效格数（hex ASC；见 [地形 capability 目录](../03-数据字典/tables/L1_terrain/terrain_capability_catalog.csv)） |
 
 ## 地形格 ASC（hex）
 
-地图格地形层初始化时，按 [terrain_profile_config.csv](../03-数据字典/tables/terrain_profile_config.csv) 向 **hex `AbilitySystemComponent`** 注册 GA、Apply GE、授予 Tag。能力目录见 [terrain_capability_catalog.csv](../03-数据字典/tables/terrain_capability_catalog.csv)。
+地图格地形层初始化时，按 [terrain_profile_config.csv](../03-数据字典/tables/L1_terrain/terrain_profile_config.csv) 向 **hex `AbilitySystemComponent`** 注册 GA、Apply GE、授予 Tag。能力目录见 [terrain_capability_catalog.csv](../03-数据字典/tables/L1_terrain/terrain_capability_catalog.csv)。
 
 ### 地形 Tag（首版）
 
