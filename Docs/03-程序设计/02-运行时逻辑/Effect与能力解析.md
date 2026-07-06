@@ -76,7 +76,7 @@
 
 ## 地形格 ASC（hex）
 
-地图格地形层初始化时，按 [terrain_profile_config.csv](../03-数据字典/tables/L1_terrain/terrain_defs.csv) 向 **hex `AbilitySystemComponent`** 注册 GA、Apply GE、授予 Tag。能力目录见 [terrain_capability_catalog.csv](../03-数据字典/tables/_program/ge_catalog.csv)。
+地图格地形层初始化时，按 [L1_terrain_defs.csv](../03-数据字典/tables/L1_terrain_defs.csv) 向 **hex `AbilitySystemComponent`** 注册 GA、Apply GE、授予 Tag。能力目录见 [ge_catalog.csv](../03-数据字典/tables/_program/ge_catalog.csv)。
 
 ### 地形 Tag（首版）
 

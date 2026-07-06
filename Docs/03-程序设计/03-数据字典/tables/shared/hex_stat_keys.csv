@@ -1,7 +1,7 @@
 stat_key,display_name_zh,value_type,layer_scope,notes_zh
-path_cost_equiv,路径等效格数,int,L1;L2;L5_facility,移动结算读取
-unit_enter_allowed,单位可进入,bool,L1;L2;L5_facility,
-build_mode,可建造设施档位,enum:build_mode,L1;L2;L5_facility,
+path_cost_equiv,路径等效格数,int,L1;L2;L5,移动结算读取
+unit_enter_allowed,单位可进入,bool,L1;L2;L5,
+build_mode,可建造设施档位,enum:build_mode,L1;L2;L5,
 mobile_city_pass,移动城市通行性,enum:mobile_city_pass,L1,
 watchtower_vision_pct,哨塔视野修正,percent,L0_cross,跨层规则
 vision_radius_pct,单位视野修正,percent,L2,
