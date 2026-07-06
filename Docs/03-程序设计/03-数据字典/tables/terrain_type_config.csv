@@ -1,0 +1,7 @@
+terrain_type_id,display_name_zh,profile_id,config_status,notes_zh
+plain,平原,terrain_profile_plain,defined,
+hill,丘陵,terrain_profile_hill,defined,
+mountain,山地,terrain_profile_mountain,defined,
+river,河流,terrain_profile_river,defined,对单位路径等效4格；其余规则同裂谷
+swamp,沼泽,terrain_profile_swamp,defined,路径等效3格；禁止一切设施建造
+rift,裂谷,terrain_profile_rift,defined,几何规则见地图图层

@@ -68,8 +68,30 @@
 | `vision_range` | 视野范围 |
 | `defender_loss_reduction` | 防守方人口损失倍率 |
 | `headcount_ratio` | 当前人数比 |
+| `terrain_path_cost_equiv` | 地形格路径等效格数（hex ASC；见 [地形 capability 目录](../03-数据字典/tables/terrain_capability_catalog.csv)） |
 
-## 运行流程
+## 地形格 ASC（hex）
+
+地图格地形层初始化时，按 [terrain_profile_config.csv](../03-数据字典/tables/terrain_profile_config.csv) 向 **hex `AbilitySystemComponent`** 注册 GA、Apply GE、授予 Tag。能力目录见 [terrain_capability_catalog.csv](../03-数据字典/tables/terrain_capability_catalog.csv)。
+
+### 地形 Tag（首版）
+
+| Tag | 说明 |
+|-----|------|
+| `Terrain.Plain` / `Terrain.Hill` / `Terrain.Mountain` / `Terrain.River` / `Terrain.Rift` / `Terrain.Swamp` | 地形种类 |
+| `Capability.Build.ProductionStorage` | 允许建生产/仓储占格类 |
+| `Capability.Build.Auxiliary` | 允许建辅助类 |
+| `Capability.Move.Enter` | 允许进入并停留 |
+| `Blocked.Build.Auxiliary` | 辅助类建造被地形 GE 阻断 |
+| `Actor.MobileCity` | 移动城市（裂谷通行例外） |
+
+### 地形 executor（首版）
+
+| `executor_key` | GA id | 说明 |
+|----------------|-------|------|
+| `TryTerrainFlatten` | `GA_TerrainFlattenToPlain` | 丘陵平整为平原；完成后重载 profile |
+| `TryBuild` | `GA_TerrainBuildTunnel` / `GA_TerrainBuildBridge` | 与设施 SO 共用建造入口 |
+| `EvaluateMobileCityRiftCrossing` | `GA_TerrainRule_MobileCityCrossRift` | 移动城市跨裂谷被动规则 |
 
 ```mermaid
 flowchart TD
