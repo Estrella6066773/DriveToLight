@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "bindingId": "10fb5faf-6390-49c1-b557-3ca23cb7280d",
   "bindingName": "循光之城",
-  "importedAt": "2026-07-06T04:12:38.122Z",
+  "updatedAt": "2026-07-07T00:56:27.825Z",
   "trigger": "schedule",
   "documentCount": 1,
   "commentCount": 4,
@@ -16,7 +16,8 @@
       "documentTitle": "数值与关卡设计待办清单",
       "documentUrl": "https://feishu.cn/docx/CLiAdHpzkovYEcxXaDicpoxwn1e",
       "commentCount": 4,
-      "replyCount": 6
+      "replyCount": 6,
+      "updatedAt": "2026-07-07T00:55:59.295Z"
     }
   ]
 }
