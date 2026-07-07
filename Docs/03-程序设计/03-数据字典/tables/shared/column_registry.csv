@@ -1,0 +1,13 @@
+table_id,column_name_zh,column_key,value_type,enum_group,notes_zh
+L1_terrain_defs,类型编号,terrain_id,string,,稳定主键；单元格保留英文 id
+L1_terrain_defs,显示名称,display_name_zh,string,,
+L1_terrain_defs,路径消耗（格）,path_cost_equiv,int,,
+L1_terrain_defs,单位可否进入,unit_enter_allowed,bool,yes_no,填「是」或「否」
+L1_terrain_defs,建造档位,build_mode,string,build_mode,填 enums 显示名称
+L1_terrain_defs,允许建造的设施,build_allow_facility_ids,string_list,facility_id,分号分隔；可填设施类型编号或中文名
+L1_terrain_defs,移动城市通行,mobile_city_pass,string,mobile_city_pass,填 enums 显示名称
+L1_terrain_defs,移动城市路径消耗（格）,mobile_city_path_cost_equiv,int,,可空；空则与路径消耗相同
+L1_terrain_defs,改造能力说明,transform_ability_desc,string,,自然语言；非空时导入关联 ge_catalog 中对应 GA
+L1_terrain_defs,程序标签,tags,string_list,,分号分隔；运行时 Tag，策划一般只读
+L1_terrain_defs,状态,status,string,record_status,填「已定」或「待定」
+L1_terrain_defs,备注,notes_zh,string,,

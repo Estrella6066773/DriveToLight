@@ -14,5 +14,5 @@ GE_FacilityAllow_RecruitmentOffice,gameplay_effect,,,,Allow.Build.recruitment_of
 GE_FacilityAllow_MineExtraction,gameplay_effect,,,,Allow.Build.mine_extraction,,defined,_program.build_grant_tags.mine_extraction,
 GE_FacilityAllow_OrchardStation,gameplay_effect,,,,Allow.Build.orchard_station,,defined,_program.build_grant_tags.orchard_station,
 GE_FacilityAllow_EnergyStation,gameplay_effect,,,,Allow.Build.energy_station,,defined,_program.build_grant_tags.energy_station,
-GA_TerrainFlattenToPlain,gameplay_ability,TryTerrainFlatten,,,,Terrain.Hill;Capability.Build,defined,L1_terrain_defs.transform_ability_id,
+GA_TerrainFlattenToPlain,gameplay_ability,TryTerrainFlatten,,,,Terrain.Hill;Capability.Build,defined,L1_terrain_defs.terrain_id=hill,丘陵平整；策划见能力说明.csv
 GA_TerrainRule_MobileCityCrossRift,gameplay_ability,EvaluateMobileCityCrossableFootprint,,,,Actor.MobileCity,defined,L1_terrain_defs.mobile_city_pass=crossable,

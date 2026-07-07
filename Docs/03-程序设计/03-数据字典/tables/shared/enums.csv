@@ -1,4 +1,6 @@
 enum_group,enum_key,display_name_zh,definition_zh,sort_order
+yes_no,true,是,布尔真,1
+yes_no,false,否,布尔假,2
 build_mode,all,全部允许,占格类+辅助类+地形类均可建（仍受 facility rule_guard 约束）,1
 build_mode,auxiliary_only,仅辅助类,阻断生产/仓储与地形类,2
 build_mode,none,全部禁止,阻断一般建造；build_allow_facility_ids 可覆盖,3
