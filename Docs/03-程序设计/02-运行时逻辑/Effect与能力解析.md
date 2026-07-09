@@ -44,9 +44,12 @@
 | `Capability.Build.Auxiliary` | 可建辅助类设施 |
 | `Allow.Build.{facility_id}` | **允许设施**；优先级高于地形基础档位 |
 | `Capability.TransportCargo` | 可执行搬运 |
-| `Capability.District.Academy` | 可激活学院城区能力 |
+| `Capability.District.Academy` | 可开启学院切换式（放宽本城区归属转化目标） |
 | `Capability.District.Cannon` | 可激活巨炮城区能力 |
-| `District.Academy.Active` | 学院切换式能力已开启 |
+| `Capability.District.CommStation` | 可激活通讯站触发式主动 |
+| `District.Academy.Active` | 学院切换式已开启（允许已解锁任意归属为目标） |
+| `District.CommStation.Ready` | 通讯站模块就绪（被动视野生效） |
+| `Buff.CommStation.UnitVisionBoost` | 通讯站主动：本回合单位视野加成 |
 | `State.InDarkZone` | 位于暗渊带 |
 | `Buff.Wall` | 城墙 Buff 生效 |
 
@@ -142,3 +145,5 @@ flowchart TD
 |------|------|------|
 | 2026-06-29 | 0.0.1 | GAS-lite 定案：GE + Tag + GA + AttributeSet 统一管线 |
 | 2026-06-30 | 0.0.2 | 废止 State.Hunger；增 IFoodAllocationRuleOverride 规划 |
+| 2026-07-09 | 0.0.3 | 通讯站触发式 Tag：`CommStation` / `UnitVisionBoost` |
+| 2026-07-09 | 0.0.4 | 学院 Tag 说明改为放宽归属转化目标 |
