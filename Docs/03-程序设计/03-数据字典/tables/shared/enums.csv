@@ -33,3 +33,13 @@ item_category,asset,资产物品,装备组等,2
 item_category,equipment,装备,队伍装备,3
 record_status,defined,已定,可导入,1
 record_status,pending,待定,数值或未评审,2
+city_control_state,ExternalNeutral,外部未招募,外部城市玩家未招募领袖,1
+city_control_state,RecruitedUnloyal,招募未效忠,招募成功未激活效忠,2
+city_control_state,RecruitedLoyal,招募效忠,效忠已激活外部城消解,3
+city_control_state,Detached,已脱离,未效忠期强制脱离恢复AI,4
+city_control_state,Occupied,占领,敌对有人口或可掠夺资源,5
+city_control_state,Takeover,接管,无活跃人口占格非占领,6
+capability_gate,allow,允许,入口可执行,1
+capability_gate,deny,禁止,入口不可执行,2
+capability_gate,conditional,条件,须满足条件表,3
+capability_gate,na,不适用,该态下无此入口,4
