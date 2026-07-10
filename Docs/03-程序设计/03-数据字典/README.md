@@ -14,14 +14,15 @@
 | 数据表 | 说明 | 关联设计 |
 |--------|------|----------|
 | [粮食与周总结数据结构](./粮食与周总结数据结构.md) | 周总结编排、粮食分配、城市拓扑 SO、废止 upkeep 链 | [粮食与周总结（草稿）](../../01-草稿/粮食与周总结/README.md) |
-| [city-capability-flags](./city-capability-flags.md) | 城市主控制态、能力入口 gate、UI/API 守卫 | [势力系统](../../02-系统设计/05-城市与领袖/势力系统.md) |
+| [city-capability-flags](./city-capability-flags.md) | 城市主控制态、能力入口 gate、UI/API 守卫；[占领触发](./city-capability-flags.md#占领触发occupation_trigger--open-060-框架) | [势力系统](../../02-系统设计/05-城市与领袖/势力系统.md) |
+| [recruitment-office-data](./recruitment-office-data.md) | 村镇储量、征兵办实例、`extract_reserve` 结算链 | [征兵办](../../02-系统设计/04-资源与人口/荒野地点/征兵办.md)、[村镇](../../02-系统设计/04-资源与人口/荒野地点/村镇.md) |
 | [队伍与战斗数据结构](./队伍与战斗数据结构.md) | 模板、能力通道、实例、指令队列、战斗日志 | [队伍系统](../../02-系统设计/06-单位与交战/队伍系统.md)、[单位类型与视野](../../02-系统设计/06-单位与交战/单位类型与视野.md) |
 | [回合与行动数据结构](./回合与行动数据结构.md) | 回合阶段、行动表、与指令队列分工 | [回合与行动表](../../02-系统设计/07-玩法循环/回合与行动表.md) |
 | [通讯与视野同步数据结构](./通讯与视野同步数据结构.md) | 即时通讯、待同步队列 | [通讯与视野系统](../../02-系统设计/06-单位与交战/通讯与视野系统.md) |
 | [地图图层配置数据结构](./地图图层配置数据结构.md) | v1.0 defs 单表体系 | [tables/](./tables/) |
 | [策划可读配置表规范](../../00-规范/策划可读配置表规范.md) | 策划主表中文列名与能力自然语言 | [能力说明.csv](./tables/shared/能力说明.csv) |
 | [地形类型配置数据结构](./地形类型配置数据结构.md) | L1 `L1_terrain_defs` 字段 | [L1_terrain_defs.csv](./tables/L1_terrain_defs.csv) |
-| [设施数据结构](./设施数据结构.md) | L5 `L5_facility_defs`、运行时 | [L5_facility_defs.csv](./tables/L5_facility_defs.csv) |
+| [设施数据结构](./设施数据结构.md) | L5 `L5_facility_defs`、运行时；含 [`CargoNodeState`](./设施数据结构.md#库存节点-cargo_node) | [L5_facility_defs.csv](./tables/L5_facility_defs.csv) |
 
 ## 粮食周总结数据结构
 
@@ -60,3 +61,4 @@
 | 2026-06-29 | 0.0.6 | 新增《粮食与周总结数据结构》独立表；废止 upkeep 策略链 |
 | 2026-07-06 | 1.0.0 | 地图 CSV v1：defs 单表 + shared + _program |
 | 2026-07-10 | 1.0.2 | 新增 city-capability-flags（OPEN-059 程序规格） |
+| 2026-07-10 | 1.0.3 | recruitment-office-data；CargoNodeState；city-capability-flags 占领触发 |

@@ -24,7 +24,7 @@
 
 ## 范围
 
-- **包含**：`city_control_state` 主枚举、正交修饰、能力入口 ID、状态 × 入口矩阵、求值顺序、UI/API 守卫约定、验收测试矩阵、配置 SO / CSV 字段雏形。
+- **包含**：`city_control_state` 主枚举、正交修饰、能力入口 ID、状态 × 入口矩阵、求值顺序、[占领触发](#占领触发occupation_trigger--open-060-框架)占位、UI/API 守卫约定、验收测试矩阵、配置 SO / CSV 字段雏形。
 - **不包含**：占领后掠夺与经营 gate 细则（OPEN-060 待补）；贸易价表（OPEN-052）、关系对话脚本（OPEN-051）。
 
 ## 主控制态：`city_control_state`
@@ -181,6 +181,41 @@
 
 **组织级关系统计**：己方归属 **4 人降 1** 含 recruited 外部城城区与编组（D-059-12）；与 gate **无关**，但须在关系服务与战斗减员管线统一累计。
 
+## 占领触发（`occupation_trigger` · OPEN-060 框架）
+
+敌对态将外部城市**打为废墟**后，玩家**队伍占格**写入 `Occupied` 主控制态；与招募 / 效忠**互斥**。程序触发数据雏形如下（占格数量、范围、守军清空 **待定**）。
+
+### 枚举 `occupation_trigger_type`
+
+| 值 | 说明 |
+|----|------|
+| `ruin_hex_occupation` | **已定**框架：废墟前置 + 队伍占格完成占领 |
+
+### 表：`occupation_trigger_defs`（CSV / SO · 占位）
+
+| 字段 | 类型 | 说明 |
+|------|------|------|
+| `occupation_trigger_type` | enum | 首版仅 `ruin_hex_occupation` |
+| `required_city_ruin_state` | enum | 至少一座城区 `is_ruin=true`；是否须**整城**全废墟 **待定** |
+| `occupying_team_id` | string | 触发占格的己方队伍实例 |
+| `target_district_id` | string | 占格目标城区（或占格格集合锚点；范围 **待定**） |
+| `target_hex_ids` | string[] | 占格格 id 列表（**待定**：`min_hex_count`、是否须清空守军） |
+| `home_city_ref` | string | 占领写入前外部城壳 id；写入后控制态 → `Occupied` |
+| `home_city_ref_transition` | enum | `external_hostile` → `occupied`（**不**走 `RecruitedUnloyal` / `RecruitedLoyal`） |
+| `min_hex_count` | int | **待定**；占格完成所需最少格数 |
+| `requires_hostile_relationship` | bool | **true**；须 **R ≤ −50** |
+| `mutually_exclusive_with` | enum[] | `RecruitedUnloyal` · `RecruitedLoyal` |
+
+### 占领写入流程（程序顺序 · 已定框架）
+
+1. 校验 **敌对**（**R ≤ −50**）且**未**招募 / **未**效忠目标城领袖。
+2. 校验外部城满足 `required_city_ruin_state`（至少一座城区废墟；整城废墟 **待定**）。
+3. 校验 `hostile_ruin_occupation_ready` 修饰与队伍占格（`min_hex_count`、守军 **待定**）。
+4. 写入 `city_control_state=Occupied`；**不**触发资源封存、招募委托或效忠链。
+5. 掠夺范围、占领后指挥 / 经营 / CMS gate **待定**（OPEN-060）。
+
+设计口径：[废墟占领](../../02-系统设计/05-城市与领袖/领袖与势力.md#废墟占领敌对--已定框架)、[接管 vs 占领](../../02-系统设计/05-城市与领袖/领袖与势力.md#接管-vs-占领已定)。
+
 ## UI / API 统一守卫
 
 | 要求 | 说明 |
@@ -261,12 +296,14 @@
 | T-22 | 未招募 | `ExternalNeutral` | 玩家编组该城队伍 | **deny** |
 | T-23 | 废墟失能 | `is_ruin` | 激活城区能力 / 设施运维 | **deny** |
 | T-24 | 废墟占领 | `hostile_ruin_occupation_ready` + 队伍占格 | 写入 `Occupied` | **allow**（占格范围 **待定**） |
-| T-25 | 废墟占领互斥 | `RecruitedUnloyal` + `hostile_ruin_occupation_ready` | 队伍占格写入占领 | **deny**；保持招募态 |
+| T-25 | 占领互斥 | `RecruitedUnloyal` | 敌对废墟占格触发占领 | **deny**；保持招募态 |
+| T-26 | 接管非占领 | 占格无活跃人口 | 写入 `Takeover` | **allow**；**不得**记为 `Occupied` |
+| T-27 | 废墟失能 × 占领 | `is_ruin` + `Occupied` | 激活设施 / 城区能力 | **deny**（失能优先于占领后修复前） |
 
 ## 待实现
 
 - [ ] `city_capability_flag_defs.csv` 落盘并与 SO 导入管线对接
-- [ ] `CityCapabilityService` 单元测试覆盖上表 T-01～T-25
+- [ ] `CityCapabilityService` 单元测试覆盖上表 T-01～T-27
 - [ ] 占领 / 接管列在 OPEN-060 闭合后补全 **△** 条件（废墟占领框架 **已定**；掠夺与占领后 gate **待定**）
 - [ ] 航行态打开 CMS 是否只读（OPEN-041 / OPEN-046 交叉）
 
@@ -275,4 +312,4 @@
 | 日期 | 版本 | 说明 |
 |------|------|------|
 | 2026-07-10 | 0.0.1 | 初稿：D-059-01～13 闭合；主控制态矩阵、正交修饰、UI/API 守卫、测试矩阵与配置雏形 |
-| 2026-07-10 | 0.0.2 | 废墟失能修饰；Occupied 改为废墟+占格；T-23～25；设施失能脚注 |
+| 2026-07-10 | 0.0.2 | 废墟失能修饰；Occupied 改为废墟+占格；`occupation_trigger` 字段雏形；T-23～27 |
