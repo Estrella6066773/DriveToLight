@@ -53,7 +53,7 @@
 | `State.InDarkZone` | 位于暗渊带 |
 | `Buff.Wall` | 城墙 Buff 生效 |
 
-> **废止**：`State.Hunger` 及饥饿 cohort 的 GAS 投影**不**纳入本管线；粮食减员由周总结 `FoodAllocationResult` 处理（见 [粮食与周总结（草稿）](../../../01-草稿/粮食与周总结/README.md)）。
+> **废止**：`State.Hunger` 及饥饿 cohort 的 GAS 投影**不**纳入本管线；粮食减员由周总结 `FoodAllocationResult` 处理（见 [粮食与周总结（草稿）](../../../01-草稿/归档/粮食与周总结/README.md)）。
 
 ## 粮食分配 Override（规划）
 

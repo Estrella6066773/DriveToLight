@@ -31,7 +31,7 @@
 | 配置 | `L5_facility_defs` · `recruitment_office` | 占格类 · 生产类；宿主须为村镇资源点格；`status=defined` |
 | 运行时工地 | `FacilitySiteState` | `work_subject_kind=facility_site`；`work_type_id=build_resource_facility` |
 | 运行时实例 | `FacilityInstanceState` | `work_subject_kind=facility_instance`；`work_type_id=extract_reserve` |
-| 储量 | `VillagePopulationReserveState` | 绑定村镇格；**提取前不计**势力粮食（见 [粮食与周总结-已定案详述](../../01-草稿/粮食与周总结/粮食与周总结-已定案详述.md)） |
+| 储量 | `VillagePopulationReserveState` | 绑定村镇格；**提取前不计**势力粮食（见 [粮食与周总结-已定案详述](../../01-草稿/归档/粮食与周总结/粮食与周总结-已定案详述.md)） |
 
 ## 首版数值（已定）
 
@@ -82,7 +82,7 @@
 
 ## 待实现
 
-- [ ] `VillagePopulationReserveState` 与现有 `CityPopulationPoolState` 拆分对齐（见 [粮食与周总结-已定案详述 · 人口两层](../../01-草稿/粮食与周总结/粮食与周总结-已定案详述.md#23-人口两层活跃容器-vs-村镇储量)）
+- [ ] `VillagePopulationReserveState` 与现有 `CityPopulationPoolState` 拆分对齐（见 [粮食与周总结-已定案详述 · 人口两层](../../01-草稿/归档/粮食与周总结/粮食与周总结-已定案详述.md#23-人口两层活跃容器-vs-村镇储量)）
 - [ ] 提取后住房校验与失败反馈（sy-14）
 - [ ] 工作效率对 `extract_batch_size` 的修正曲线（首版可先固定 15）
 
