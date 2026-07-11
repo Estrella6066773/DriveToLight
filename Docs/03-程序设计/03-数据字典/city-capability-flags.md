@@ -57,11 +57,11 @@
 | `is_ruin` | 任意城区 | 禁工作区、**不可迁入**；**设施**与**特殊城区能力**失能（见 [废墟失能](../../02-系统设计/03-图层与地点/建筑层/城区总览.md#废墟失能)）；废墟「仅可迁出」与招募未效忠「禁止迁出」冲突时 → **招募未效忠优先**（D-059-06） |
 | `hostile_ruin_occupation_ready` | 外部城壳 | **敌对**且满足废墟占领前置（至少一座城区 `is_ruin`；是否须整城全废墟 **待定**）时，**队伍占格**可触发 `Occupied` 写入（sy-34） |
 | `topology_connected_to_player` | 未效忠外部城 | 仅影响**粮食**周总结扣减路径（玩家池优先 → 封存回退）；**不是**连接指令（D-059-02） |
-| `mobile_city_mode=docked` | **仅**玩家移动城市 | 允许连接 / 分离 / 占格迁移（停泊）；禁整城航行移动 |
-| `mobile_city_mode=sailing` | **仅**玩家移动城市 | 允许航行移动；禁连接 / 分离 / 占格迁移 / **城区与设施修复**；队伍进出城受限（sy-19） |
+| `mobile_city_mode=docked` | **仅**玩家移动城市 | 允许连接 / 分离 / 迁移城区（停泊）；禁整城航行移动 |
+| `mobile_city_mode=sailing` | **仅**玩家移动城市 | 允许航行移动；禁连接 / 分离 / 迁移城区 / **城区与设施修复**；队伍进出城受限（sy-19） |
 | `relationship_pending_detach` | 未效忠 | 本回合 **R ≤ −50** 但关系结算**尚未**执行：当回合仍 **allow** 合法操作；**下回合**起 `Detached`（D-059-07） |
 
-**外部城永真修饰**：`is_external_city=true` → 永禁连接 / 分离 / 占格迁移 / 停泊航行 / 航行放弃城区（[移动城市专属能力](../../02-系统设计/05-城市与领袖/势力系统.md#移动城市专属能力已定)）。
+**外部城永真修饰**：`is_external_city=true` → 永禁连接 / 分离 / 迁移城区 / 停泊航行 / 航行放弃城区（[移动城市专属能力](../../02-系统设计/05-城市与领袖/势力系统.md#移动城市专属能力已定)）。
 
 ## 能力入口 ID 与矩阵
 
@@ -74,7 +74,7 @@
 | `topo.connect` | 主动连接玩家城 | ✗ | ✗ | — | ✗ | △ | △ | △¹ |
 | `topo.separate` | 分离城区 | ✗ | ✗ | — | ✗ | △ | △ | △¹ |
 | `topo.reconnect` | 再连接 | ✗ | ✗ | — | ✗ | △ | △ | △¹ |
-| `topo.district_relocate` | 城区占格迁移 | ✗ | ✗ | — | ✗ | ✗ | ✗ | △¹ |
+| `topo.district_relocate` | 迁移城区 | ✗ | ✗ | — | ✗ | ✗ | ✗ | △¹ |
 
 ¹ 仅 `mobile_city_mode=docked` 为 **△→✓**；`sailing` 为 **✗**。
 
@@ -291,8 +291,8 @@
 | T-17 | 商队 | `ExternalNeutral`，**R ≥ 0** | 领袖页成交 | 自动编组；**不可**手动建商队 |
 | T-18 | 4 人降 1 | `RecruitedUnloyal` | 外部城编组减员 4 人 | 组织级池降 1 关系 |
 | T-19 | 补员来源 | `RecruitedUnloyal` | 系统补员 | 相邻格来源池；类型与归属校验 |
-| T-20 | 玩家城航行 | `player_mobile` + `sailing` | 占格迁移 | **deny** |
-| T-21 | 玩家城停泊 | `player_mobile` + `docked` | 占格迁移 | **allow** |
+| T-20 | 玩家城航行 | `player_mobile` + `sailing` | 迁移城区 | **deny** |
+| T-21 | 玩家城停泊 | `player_mobile` + `docked` | 迁移城区 | **allow** |
 | T-22 | 未招募 | `ExternalNeutral` | 玩家编组该城队伍 | **deny** |
 | T-23 | 废墟失能 | `is_ruin` | 激活城区能力 / 设施运维 | **deny** |
 | T-24 | 废墟占领 | `hostile_ruin_occupation_ready` + 队伍占格 | 写入 `Occupied` | **allow**（占格范围 **待定**） |
