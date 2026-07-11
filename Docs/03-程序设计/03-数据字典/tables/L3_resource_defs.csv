@@ -1,5 +1,5 @@
 resource_id,display_name_zh,reserve_kind,build_allow_facility_ids,rebuildable,reveal_default,reserve_min,reserve_max,extract_work_type,status,notes_zh
-village,村镇,population,recruitment_office,true,hidden,,,extract_reserve,pending,储量形态待定
-mine,矿藏,metal,mine_extraction,true,hidden,,,extract_reserve,pending,
-orchard,果地,food,orchard_station,true,hidden,,,extract_reserve,pending,
-relic,遗迹,energy,energy_station,false,hidden,,,extract_reserve,defined,本体不可重建
+village,村镇,population,recruitment_office,true,hidden,60,120,extract_reserve,defined,对齐征兵办单次15人
+mine,矿藏,metal,mine_extraction,true,hidden,400,700,extract_reserve,defined,对齐矿区产出25/3回合
+orchard,果地,food,orchard_station,true,hidden,400,700,extract_reserve,defined,对齐果园产出25/3回合
+relic,遗迹,energy,energy_station,false,hidden,500,900,extract_reserve,defined,对齐能源站产出40；支撑温室与日常

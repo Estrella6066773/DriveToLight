@@ -28,6 +28,7 @@ facility_subtype,storage,仓储类,提升存储上限,3
 facility_subtype,dwelling,屋舍,叠加居民承载,4
 production_tier,reserve_to_resource,储量转化,资源层储量→资源物品,1
 production_tier,resource_to_asset,物品转化,资源物品→资产物品,2
+production_tier,resource_convert,资源互转,一类资源物品→另一类（如能源→食物）,3
 item_category,resource,资源物品,金属食物能源等,1
 item_category,asset,资产物品,装备组等,2
 item_category,equipment,装备,队伍装备,3
