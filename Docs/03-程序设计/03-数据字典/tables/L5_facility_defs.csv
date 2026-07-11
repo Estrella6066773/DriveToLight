@@ -8,9 +8,7 @@ recruitment_office,征兵办,occupying,production,reserve_to_resource,build_reso
 greenhouse,温室,occupying,production,resource_convert,build_resource_facility,3,,maintain_facility,,,,,,,,,defined,能源50→食物150；建造80金属
 processing_plant,加工厂,occupying,production,resource_to_asset,build_resource_facility,,,maintain_facility,,,,,,,,,pending,
 military_industry,军工区,occupying,production,resource_to_asset,build_resource_facility,,,maintain_facility,,,,,,,,,pending,
-material_warehouse,建材仓,occupying,storage,,build_resource_facility,,,maintain_facility,,,,,,,,,pending,
-food_warehouse,粮仓,occupying,storage,,build_resource_facility,,,maintain_facility,,,,,,,,,pending,
-fuel_warehouse,燃料库,occupying,storage,,build_resource_facility,,,maintain_facility,,,,,,,,,pending,
+warehouse,仓库,occupying,storage,,build_resource_facility,3,,maintain_facility,,,,,,,,,defined,共用容量；金属+食物+能源；加成数值待补
 dwelling,屋舍,occupying,dwelling,,build_resource_facility,3,,maintain_facility,,15,,,,,,,defined,叠加+15；建造20金属
 watchtower,哨塔,auxiliary,,,build_resource_facility,,,maintain_facility,,,,,,,,,pending,
 trap,陷阱,auxiliary,,,build_resource_facility,,,maintain_facility,,,,,,,,,pending,
