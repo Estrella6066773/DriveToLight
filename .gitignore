@@ -4,7 +4,7 @@
 #
 # 版本分工（对齐《机魂》）：
 #   Plastic UVC：Assets/、ProjectSettings/
-#   Git：Docs/、.cursor/、ignore.conf、.gitignore 等
+#   Git：Docs/、ignore.conf、.gitignore 等
 
 /[Aa]ssets/
 /[Pp]roject[Ss]ettings/
@@ -38,6 +38,8 @@
 # Visual Studio / Gradle
 .vs/
 .gradle/
+.cursor/
+.trae/
 .vscode/
 
 # 自动生成的 IDE 工程文件
