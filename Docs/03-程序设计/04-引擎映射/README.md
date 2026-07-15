@@ -14,7 +14,7 @@
 | Core | `Assets/Scripts/Core/` | — | [模块划分](../01-架构总览/模块划分.md) |
 | Turn | `Assets/Scripts/Turn/` | `Assets/Resources/Config/Turn/` | [回合与行动数据结构](../03-数据字典/回合与行动数据结构.md) |
 | Team | `Assets/Scripts/Team/` | `Assets/Resources/Config/Team/` | [队伍与战斗数据结构](../03-数据字典/队伍与战斗数据结构.md) |
-| Communication | `Assets/Scripts/Communication/` | `Assets/Resources/Config/Comm/` | [通讯与视野同步数据结构](../03-数据字典/通讯与视野同步数据结构.md) |
+| Vision | `Assets/Scripts/Vision/` | `Assets/Resources/Config/Vision/` | [视野同步数据结构](../03-数据字典/视野同步数据结构.md) |
 | Map | `Assets/Scripts/Map/` | `Assets/Resources/Config/Map/` | 待建地图表 |
 | City | `Assets/Scripts/City/` | `Assets/Resources/Config/City/` | 待建城区表 |
 
