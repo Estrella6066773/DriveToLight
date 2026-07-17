@@ -1,6 +1,8 @@
-item_id,display_name_zh,category,stack_hex_max,stack_warehouse_max,weight_per_unit,pickup_requires_team,status,notes_zh
-metal,金属,resource,,,,true,pending,
-food,食物,resource,,,,true,pending,
-energy,能源,resource,,,,true,pending,
-population_unit,人口单位,resource,,,,false,pending,
-equipment_generic,装备组占位,asset,,,,true,pending,
+类型编号,显示名称,物品类型,金币基准价,单格最大堆叠,仓库最大堆叠,单位搬运重量,是否须队伍拾取,状态,备注
+metal,金属,资源物品,30,,,,是,待定,金币基准价已定；堆叠与重量待定
+food,食物,资源物品,15,,,,是,待定,金币基准价已定；堆叠与重量待定
+energy,能源,资源物品,50,,,,是,待定,计价锚：1 份能源 = 50 金币；堆叠与重量待定
+population_unit,人口单位,资源物品,100,,,,否,待定,金币基准价已定；堆叠与重量待定
+simple_armor,简陋兵甲,资产物品,450,,,,是,待定,金币基准价已定（有意低于原料价值，市场不认可低级制成品）；产自简易工坊；步兵组建消耗；配方金属数待定
+bow_kit,弓具,资产物品,600,,,,是,待定,金币基准价已定（有意低于原料价值，市场不认可低级制成品）；产自简易工坊；弓手组建消耗；配方金属数待定
+equipment_generic,装备组占位,资产物品,,,,,是,待定,占位行；具体资产物品逐行登记于本表

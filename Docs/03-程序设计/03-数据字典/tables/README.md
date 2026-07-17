@@ -1,6 +1,6 @@
 # 配置表 v1.0 · 六边形格地图
 
-> schema_version: **1.0.2**  
+> schema_version: **1.0.4**  
 > 字段详解：[地图图层配置数据结构.md](../地图图层配置数据结构.md)  
 > 策划填写规范：[策划可读配置表规范](../../../00-规范/策划可读配置表规范.md)
 
@@ -26,7 +26,7 @@ tables/
 ├── L3_resource_defs.csv
 ├── L4_district_defs.csv
 ├── L5_facility_defs.csv
-├── L6_item_defs.csv
+├── L6_item_defs.csv         ← 已中文化列名 + 金币基准价
 ├── L0_cross_modifiers.csv
 ├── shared/                  枚举、列对照、能力说明、合成栈
 └── _program/                程序导入映射（策划只读）
