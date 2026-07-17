@@ -1,6 +1,6 @@
 facility_id,grant_tag,rule_priority,notes_zh
 bridge,Allow.Build.bridge,100,
-tunnel,Allow.Build.tunnel,100,
+passage,Allow.Build.passage,100,
 recruitment_office,Allow.Build.recruitment_office,100,资源点挂载
 mine_extraction,Allow.Build.mine_extraction,100,资源点挂载
 orchard_station,Allow.Build.orchard_station,100,资源点挂载

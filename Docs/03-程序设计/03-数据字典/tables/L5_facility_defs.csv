@@ -1,6 +1,6 @@
 facility_id,display_name_zh,category,subtype,production_tier,build_work_type,build_turns,durability_max,maintain_amount,maintain_work_type,maintain_work_amount,storage_bonus,resident_cap_bonus,pop_loss_reduction_pct,host_terrain_ids,on_valid_path_cost,on_valid_build_mode,on_valid_unit_enter,on_valid_span_connect,revert_on_destroy,status,notes_zh
 bridge,桥梁,occupying,terrain,,build_resource_facility,,40,15,maintain_facility,3,,,,river;rift,,,true,true,true,defined,几何 guard 见设计文档
-tunnel,隧道,occupying,terrain,,build_resource_facility,,80,15,maintain_facility,5,,,,mountain,1,auxiliary_only,,false,true,defined,
+passage,通道,occupying,terrain,,build_resource_facility,,80,15,maintain_facility,5,,,,mountain;hill,1,auxiliary_only,,false,true,defined,
 mine_extraction,矿区,occupying,production,reserve_to_resource,build_resource_facility,3,60,15,maintain_facility,4,,,,,,,,,defined,产出25金属；建造30金属
 orchard_station,果园,occupying,production,reserve_to_resource,build_resource_facility,3,40,15,maintain_facility,3,,,,,,,,,defined,产出25食物；建造30金属
 energy_station,能源站,occupying,production,reserve_to_resource,build_resource_facility,3,60,15,maintain_facility,4,,,,,,,,,defined,产出40能源；建造30金属

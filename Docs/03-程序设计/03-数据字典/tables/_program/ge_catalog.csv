@@ -9,10 +9,11 @@ GE_Terrain_FacilityBuild_AuxiliaryOnly,gameplay_effect,,,,Capability.Build.Produ
 GE_Terrain_FacilityBuild_None,gameplay_effect,,,,Capability.Build,,defined,L1_terrain_defs.build_mode=none,
 GE_Terrain_BlockUnitEnter,gameplay_effect,,,,Capability.Move.Enter,,defined,L1_terrain_defs.unit_enter_allowed=false,
 GE_FacilityAllow_Bridge,gameplay_effect,,,,Allow.Build.bridge,,defined,_program.build_grant_tags.bridge,
-GE_FacilityAllow_Tunnel,gameplay_effect,,,,Allow.Build.tunnel,,defined,_program.build_grant_tags.tunnel,
+GE_FacilityAllow_Passage,gameplay_effect,,,,Allow.Build.passage,,defined,_program.build_grant_tags.passage,
 GE_FacilityAllow_RecruitmentOffice,gameplay_effect,,,,Allow.Build.recruitment_office,,defined,_program.build_grant_tags.recruitment_office,
 GE_FacilityAllow_MineExtraction,gameplay_effect,,,,Allow.Build.mine_extraction,,defined,_program.build_grant_tags.mine_extraction,
 GE_FacilityAllow_OrchardStation,gameplay_effect,,,,Allow.Build.orchard_station,,defined,_program.build_grant_tags.orchard_station,
 GE_FacilityAllow_EnergyStation,gameplay_effect,,,,Allow.Build.energy_station,,defined,_program.build_grant_tags.energy_station,
-GA_TerrainFlattenToPlain,gameplay_ability,TryTerrainFlatten,,,,Terrain.Hill;Capability.Build,defined,L1_terrain_defs.terrain_id=hill,丘陵平整；策划见能力说明.csv
+GA_TerrainFlattenToPlain,gameplay_ability,TryTerrainFlatten,,,,Terrain.Hill;Capability.Build,deprecated,L1_terrain_defs.terrain_id=hill,已废止——建通道即丘陵平整
 GA_TerrainRule_MobileCityCrossRift,gameplay_ability,EvaluateMobileCityCrossableFootprint,,,,Actor.MobileCity,defined,L1_terrain_defs.mobile_city_pass=crossable,
+GE_Terrain_BlockMobileCity,gameplay_effect,,,,Capability.MobileCity.Move,,defined,L1_terrain_defs.mobile_city_pass=blocked,

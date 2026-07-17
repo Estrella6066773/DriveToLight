@@ -1,5 +1,5 @@
 能力编号,能力名称,适用对象,何时可用,效果说明,消耗说明,关联类型编号,状态,备注
-GA_TerrainFlattenToPlain,丘陵平整,地形,工程队在丘陵格且具备建造能力,将目标格地形改为平原；完成后格类型替换为平原,按工作效率积累工作量；对照时长待定,hill,已定,程序入口 TryTerrainFlatten
+GA_TerrainFlattenToPlain,丘陵平整（已废止）,地形,工程队在丘陵格且具备建造能力,将目标格地形改为平原；完成后格类型替换为平原,按工作效率积累工作量；对照时长待定,hill,已废止,程序入口 TryTerrainFlatten；2026-07-17 废止——建通道即丘陵平整，不再需要单独 GA
 GA_TerrainRule_MobileCityCrossRift,跨河跨谷落格校验,移动城市,城区占格规划行经「可跨越」格时,校验 footprint 是否满足跨河、跨谷规则；不满足则不可落格,无额外资源消耗,,已定,程序入口 EvaluateMobileCityCrossableFootprint；关联 mobile_city_pass=可跨越
 GA_ScoutScan,侦察扫描,队伍,侦察队进入含资源点的视野范围,将资源点揭示等级提升至「揭示种类」,无工作量；即时生效,scout,已定,与资源点揭示等级合并取最高、不降级
 GA_ProspectScan,勘探工作,队伍,勘探队对资源点执行勘探指令,50% 工作成果至少揭示种类；100% 成果揭示储量,按工作效率积累；对照见回合与行动表,prospect,已定,
