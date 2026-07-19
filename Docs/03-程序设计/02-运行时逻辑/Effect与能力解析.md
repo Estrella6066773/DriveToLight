@@ -36,8 +36,7 @@
 | `Capability.Move` | 可执行移动 |
 | `Capability.DockToSail` | 可执行离港 |
 | `Capability.SailToDock` | 可执行入港 |
-| `Capability.ScoutScan` | 可执行侦察扫描 |
-| `Capability.ProspectScan` | 可执行勘探扫描 |
+| `Capability.ScoutScan` | 可执行侦察揭示 |
 | `Capability.Build` | 可执行建造 |
 | `Capability.Build.ProductionStorage` | 可建生产/仓储占格类 |
 | `Capability.Build.Terrain` | 可建地形类设施 |
@@ -46,10 +45,8 @@
 | `Capability.TransportCargo` | 可执行搬运 |
 | `Capability.District.Academy` | 可开启学院切换式（放宽本城区归属转化目标） |
 | `Capability.District.Cannon` | 可激活巨炮城区能力 |
-| `Capability.District.Watchtower` | 可激活侦察塔触发式主动 |
 | `District.Academy.Active` | 学院切换式已开启（允许已解锁任意归属为目标） |
-| `District.Watchtower.Ready` | 侦察塔模块就绪（被动视野生效） |
-| `Buff.Watchtower.UnitVisionBoost` | 侦察塔主动：本回合单位视野加成 |
+| `Capability.Facility.Watchtower` | 侦察塔视野被动（所在格己方单位视野 +3；地形修正叠加） |
 | `State.InDarkZone` | 位于暗渊带 |
 | `Buff.Wall` | 城墙 Buff 生效 |
 

@@ -40,7 +40,7 @@
 | `required_work_amount` | **30** | 满编工程队专精 **3** 回合 |
 | `output_per_work_completion` / `default_extract_batch` | **15** 人 | [征兵办](../../02-系统设计/04-资源与人口/荒野地点/征兵办.md) |
 | `build_metal_cost` | **30** | [产出基准](../../02-系统设计/04-资源与人口/四种核心资源.md#四类资源产出基准已定) |
-| `build_turns` | **3** | `L5_facility_defs` |
+| `build_work_amount` | **3** | `L5_facility_defs` |
 | 村镇 `reserve_min` / `reserve_max` | **60** / **120** | [村镇](../../02-系统设计/04-资源与人口/荒野地点/村镇.md)；`L3_resource_defs` |
 
 ## 运行时：`VillagePopulationReserveState`

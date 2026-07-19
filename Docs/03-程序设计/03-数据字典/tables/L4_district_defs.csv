@@ -1,8 +1,8 @@
-district_id,display_name_zh,category,base_resident_cap,load_step_grids,load_repair_cost,load_repair_kind,facility_slots,routine_cost_json,activation_cost_json,ruins_threshold_pct,ruins_allows_work,status,notes_zh
-core,核心区,special,50,3,4,metal,0,"{""energy"":15}",,20,false,defined,日常15能源/3回合；不可关工作区
-general,一般城区,general,50,3,4,metal,,,,20,false,defined,无城区日常账单；负载同锚
-dry_dock,城坞,special,50,3,4,metal,0,"{""energy"":10}",,20,false,defined,日常10能源/3回合
-watchtower,侦察塔,special,50,3,4,metal,0,"{""energy"":10}","{""energy"":20}",20,false,defined,日常10；主动20
-academy,学院,special,50,3,4,metal,0,"{""energy"":8}",,20,false,defined,日常8能源/3回合
-cannon,巨炮,special,50,3,4,metal,0,,"{""energy"":80,""metal"":40}",20,false,defined,无日常；激活80能源+40金属
-ruins_generic,废墟城区,general,0,3,4,metal,,,,20,false,defined,状态废墟；不可迁入
+district_id,display_name_zh,category,base_resident_cap,load_step_grids,load_repair_cost,load_repair_kind,facility_slots,routine_cost_json,activation_cost_json,ruins_threshold_pct,ruins_allows_work,damage_reduction_ratio,status,notes_zh
+core,核心区,special,50,3,4,metal,0,"{""energy"":15}",,20,false,0.20,defined,日常15能源/3回合；不可关工作区
+general,一般城区,general,50,3,4,metal,,,,20,false,0.20,defined,无城区日常账单；负载同锚
+dry_dock,城坞,special,50,3,4,metal,0,"{""energy"":10}",,20,false,0.20,defined,日常10能源/3回合
+watchtower,侦察塔,special,50,3,4,metal,0,,,20,false,0.20,removed,已移出特殊城区，统一为野外设施（L5）；旧历史行仅供迁移对照
+academy,学院,special,50,3,4,metal,0,"{""energy"":8}",,20,false,0.20,defined,日常8能源/3回合
+cannon,巨炮,special,50,3,4,metal,0,,"{""energy"":80,""metal"":40}",20,false,0.20,defined,无日常；激活80能源+40金属
+ruins_generic,废墟城区,general,0,3,4,metal,,,,20,false,0.20,defined,状态废墟；不可迁入

@@ -1,16 +1,16 @@
-facility_id,display_name_zh,category,subtype,production_tier,build_work_type,build_turns,durability_max,maintain_amount,maintain_work_type,maintain_work_amount,storage_bonus,resident_cap_bonus,pop_loss_reduction_pct,host_terrain_ids,on_valid_path_cost,on_valid_build_mode,on_valid_unit_enter,on_valid_span_connect,revert_on_destroy,status,notes_zh
-bridge,桥梁,occupying,terrain,,build_resource_facility,,40,15,maintain_facility,3,,,,river;rift,,,true,true,true,defined,几何 guard 见设计文档
-passage,通道,occupying,terrain,,build_resource_facility,,80,15,maintain_facility,5,,,,mountain;hill,1,auxiliary_only,,false,true,defined,
-mine_extraction,矿区,occupying,production,reserve_to_resource,build_resource_facility,3,60,15,maintain_facility,4,,,,,,,,,defined,产出25金属；建造30金属
-orchard_station,果园,occupying,production,reserve_to_resource,build_resource_facility,3,40,15,maintain_facility,3,,,,,,,,,defined,产出25食物；建造30金属
-energy_station,能源站,occupying,production,reserve_to_resource,build_resource_facility,3,60,15,maintain_facility,4,,,,,,,,,defined,产出40能源；建造30金属
-recruitment_office,征兵办,occupying,production,reserve_to_resource,build_resource_facility,3,40,15,maintain_facility,3,,,,,,,,,defined,单次15人；建造30金属
-greenhouse,温室,occupying,production,resource_convert,build_resource_facility,3,60,15,maintain_facility,4,,,,,,,,,defined,能源50→食物150；建造80金属
-processing_plant,加工厂,occupying,production,resource_to_asset,build_resource_facility,,50,15,maintain_facility,4,,,,,,,,,pending,
-military_industry,军工区,occupying,production,resource_to_asset,build_resource_facility,,60,15,maintain_facility,4,,,,,,,,,pending,
-warehouse,仓库,occupying,storage,,build_resource_facility,3,60,15,maintain_facility,4,,,,,,,,,defined,共用容量；金属+食物+能源；加成数值待补
-dwelling,屋舍,occupying,dwelling,,build_resource_facility,3,40,15,maintain_facility,3,,15,,,,,,,defined,叠加+15；建造20金属
-watchtower,哨塔,auxiliary,,,build_resource_facility,,30,15,maintain_facility,2,,,,,,,,,pending,
-trap,陷阱,auxiliary,,,build_resource_facility,,20,15,maintain_facility,2,,,,,,,,,pending,
-city_wall,城墙,auxiliary,,,build_resource_facility,,120,15,maintain_facility,5,,,,,,,,,pending,本格人口减损
-navigation_channel,航道,auxiliary,,,build_resource_facility,,30,15,maintain_facility,3,,,,plain;hill,1,,true,false,false,defined,航行损伤减50%；非城市单位移动步长→1
+facility_id,display_name_zh,category,subtype,production_tier,build_work_type,build_work_amount,durability_max,maintain_amount,maintain_work_type,maintain_work_amount,storage_bonus,resident_cap_bonus,pop_loss_reduction_pct,damage_reduction_ratio,host_terrain_ids,on_valid_path_cost,on_valid_build_mode,on_valid_unit_enter,on_valid_span_connect,revert_on_destroy,status,notes_zh
+bridge,桥梁,occupying,terrain,,build_resource_facility,2,40,15,maintain_facility,3,,,10,0.10,river;rift,,,true,true,true,defined,几何 guard 见设计文档
+passage,通道,occupying,terrain,,build_resource_facility,3,80,15,maintain_facility,5,,,10,0.10,mountain;hill,1,auxiliary_only,,false,true,defined,
+mine_extraction,矿区,occupying,production,reserve_to_resource,build_resource_facility,3,60,15,maintain_facility,4,,,15,0.15,,,,,,defined,产出25金属；建造30金属
+orchard_station,果园,occupying,production,reserve_to_resource,build_resource_facility,3,40,15,maintain_facility,3,,,15,0.15,,,,,,defined,产出25食物；建造30金属
+energy_station,能源站,occupying,production,reserve_to_resource,build_resource_facility,3,60,15,maintain_facility,4,,,15,0.15,,,,,,defined,产出40能源；建造30金属
+recruitment_office,征兵办,occupying,production,reserve_to_resource,build_resource_facility,3,40,15,maintain_facility,3,,,15,0.15,,,,,,defined,单次15人；建造30金属
+greenhouse,温室,occupying,production,resource_convert,build_resource_facility,3,60,15,maintain_facility,4,,,15,0.15,,,,,,defined,能源50→食物150；建造80金属
+processing_plant,加工厂,occupying,production,resource_to_asset,build_resource_facility,3,50,15,maintain_facility,4,,,15,0.15,,,,,,pending,资源→资产转化
+military_industry,军工区,occupying,production,resource_to_asset,build_resource_facility,4,60,15,maintain_facility,4,,,15,0.15,,,,,,pending,资源→武装资产转化
+warehouse,仓库,occupying,storage,,build_resource_facility,3,60,15,maintain_facility,4,,,15,0.15,,,,,,defined,共用容量；金属+食物+能源；加成数值待补
+dwelling,屋舍,occupying,dwelling,,build_resource_facility,3,40,15,maintain_facility,3,,15,10,0.10,,,,,,defined,叠加+15；建造20金属
+watchtower,哨塔,auxiliary,,,build_resource_facility,3,30,15,maintain_facility,2,,,10,0.10,,,,,,defined,建造30金属；所在格己方单位视野+3（加算；地形修正：密林-1 / 丘陵+1 / 山地+2）；不受工作效率影响
+trap,陷阱,auxiliary,,,build_resource_facility,2,20,15,maintain_facility,2,,,0,0.00,,,,,,pending,格内进入单位触发伤害
+city_wall,城墙,auxiliary,,,build_resource_facility,5,120,15,maintain_facility,5,,,50,0.50,,,,,,pending,本格人口减损
+navigation_channel,航道,auxiliary,,,build_resource_facility,3,30,15,maintain_facility,3,,,10,0.10,plain;hill,1,,true,false,false,defined,航行损伤减50%；非城市单位移动步长→1

@@ -1,4 +1,4 @@
-environment_id,display_name_zh,subtype,stack_rule,path_cost_delta,unit_enter_override,vision_radius_pct,watchtower_vision_pct,duration_turns,build_mode_override,tags,status,notes_zh
+environment_id,display_name_zh,subtype,stack_rule,path_cost_delta,unit_enter_override,vision_radius_pct,watchtower_vision_bonus,duration_turns,build_mode_override,tags,status,notes_zh
 woodland,树林,ground_surface,exclusive,0,,0,0,,,Env.Woodland,defined,
 dense_woodland,密林,ground_surface,exclusive,1,,,,,,Env.DenseWoodland,pending,削弱哨塔见 cross_modifiers
 scorched_earth,焦土,ground_surface,exclusive,0,,0,0,,,Env.ScorchedEarth,defined,
