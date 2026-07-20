@@ -74,9 +74,9 @@
 
 | 入口 ID | 说明 | ExternalNeutral | RecruitedUnloyal | RecruitedLoyal | Detached | Surrendered | 玩家移动城 |
 |---------|------|:---:|:---:|:---:|:---:|:---:|:---:|
-| `topo.connect` | 主动连接玩家城 | ✗ | ✗ | — | ✗ | ✗ | △¹ |
-| `topo.separate` | 分离城区 | ✗ | ✗ | — | ✗ | ✗ | △¹ |
-| `topo.reconnect` | 再连接 | ✗ | ✗ | — | ✗ | ✗ | △¹ |
+| `topo.connect` | 主动连接玩家城 | ✗ | ✓ | — | ✗ | ✗ | △¹ |
+| `topo.separate` | 分离城区 | ✗ | ✓ | — | ✗ | ✗ | △¹ |
+| `topo.reconnect` | 再连接 | ✗ | ✓ | — | ✗ | ✗ | △¹ |
 | `topo.district_relocate` | 迁移城区 | ✗ | ✗ | — | ✗ | ✗ | △¹ |
 
 ¹ 仅 `mobile_city_mode=docked` 为 **△→✓**；`sailing` 为 **✗**。
@@ -86,7 +86,7 @@
 | 入口 ID | 说明 | ExternalNeutral | RecruitedUnloyal | RecruitedLoyal | Detached | Surrendered |
 |---------|------|:---:|:---:|:---:|:---:|:---:|
 | `struct.repair` | 修复城区结构 | △² | ✓ | ✓³ | △² | ✗ |
-| `struct.dismantle` | 拆解结构回收 | △² | ✓ | ✓³ | △² | ✗ |
+| `struct.dismantle` | 拆解结构回收 | △² | ✗ | ✓³ | △² | ✗ |
 | `struct.transform` | 改造城区（改词条等） | ✗ | ✗ | ✓³ | ✗ | ✗ |
 
 ² 未招募时由 **AI** 决策，玩家 **✗**。³ 效忠后城区归玩家资产，按玩家城 **✓**。¹¹ 玩家移动城 **`mobile_city_mode=sailing`** → **`struct.repair` / `fac.repair` ✗**（须 **停泊**）；见 [分离与拆解 · 修复城区](../../02-系统设计/03-图层与地点/建筑层/分离与拆解.md#修复城区)。
@@ -100,9 +100,9 @@
 | `pop.work_zone_toggle` | 工作区启闭（**仅特殊城区**模块；**一般城区**走设施行） | △² | ✓⁴ | ✓³ | △² | ✗ |
 | `pop.affiliation_convert` | 人口归属转化 | ✗ | ✗ | ✓³ | ✗ | ✗ |
 | `pop.residential_move_out` | 从住宅迁出 / 改换安置 | △² | ✗ | ✓³ | △² | ✗ |
-| `pop.residential_move_in` | 迁入新居民 | △² | ✓⁵ | ✓³ | △² | ✗ |
+| `pop.residential_move_in` | 迁入新居民 | △² | ✗⁵ | ✓³ | △² | ✗ |
 
-⁴ 废墟 `is_ruin` → 模块工作区 **✗**。⁴ᵇ **`is_core_district`** → 模块工作区**不可关闭**。⁴ᶜ **一般城区**：无 `pop.work_zone_toggle`；各设施 `fac.work_zone_toggle`（与模块**同逻辑**）**待定**字段名。⁵ 废墟 **✗**（不可迁入）；未效忠 **禁止迁出** 优先于废墟「仅可迁出」（D-059-06）。
+⁴ 废墟 `is_ruin` → 模块工作区 **✗**。⁴ᵇ **`is_core_district`** → 模块工作区**不可关闭**。⁴ᶜ **一般城区**：无 `pop.work_zone_toggle`；各设施 `fac.work_zone_toggle`（与模块**同逻辑**）**待定**字段名。⁵ 废墟 **✗**（不可迁入）；未效忠**不可迁入**（人口锁定在原城市）；迁出见 `pop.residential_move_out` 行。
 
 **编组细则**（各态均为 **allow** 时仍须满足）：[人口预占用](../../02-系统设计/04-资源与人口/人口与迁移.md#编组--人口预占用已定)、[创队与补员](../../02-系统设计/06-单位与交战/队伍系统.md#创队与补员已定)、[单一人口类型](../../02-系统设计/04-资源与人口/人口与迁移.md#编组--单一人口类型已定)、[人口归属](../../02-系统设计/04-资源与人口/人口与迁移.md#人口归属)（D-059-08）。**废墟**与**中立城区**（`district_ownership=neutral`）均**不可**编组——仅玩家归属城区可编组。
 
@@ -172,12 +172,37 @@
 
 招募成功 **下一回合** 起玩家指挥（与关系行动写入时点一致）。¹² 沦陷城市 AI **仅执行非战斗调度**——守军不主动还击（受攻击仍可反击）。
 
+## 中立城区权限子表
+
+无归属城区（`district_ownership=neutral`，即 `faction=null, city=null`）**不占城市控制态枚举**——它没有所属城市，因此单独以子表表达操作权限。子表仅列与主矩阵默认 `deny` 有差异的入口；未列入的入口一律 `deny`。
+
+| 入口 ID | 中文说明 | 中立城区 | 说明 |
+|---------|----------|:--:|------|
+| `struct.dismantle` | 拆解结构回收金属 | ✓ | |
+| `struct.repair` | 修复城区结构 | ✓ | |
+| `res.cms_storage` | 城市管理系统 · 资源存储分配 | ✓ | |
+| `res.manual_transfer` | 手动调拨 / 出库 / 入库 | ✓ | |
+| `pop.residential_move_out` | 人口迁出 | ✓ | |
+| `pop.residential_move_in` | 人口迁入 | ✓ | |
+
+其余入口均为 `deny`：
+
+- **`topo.*`（链接/分离/迁移城区）**：不可——无归属城区未接入玩家城市拓扑。
+- **`fac.*`（设施新建/拆除/修复/升级/运维）**：不可——需归属权。
+- **`pop.squad_form` / `pop.district_work` / `pop.work_zone_toggle`**（编组/工作分配/工作区开关）：不可——无归属城区人口不归玩家调用，工作需玩家执行`队伍级任务`而非占用本地人口。
+- **`struct.transform`**（改造城区/改词条）：不可——同设施，需归属权。
+
+**正交修饰**：`is_ruin`（是否废墟）叠加于子表结果之上——子表返回 `allow` 的入口，若 `is_ruin=true` 则降为 `deny`（废墟时拆解/修复/存取资源仍可执行，但人口迁入不可）。
+
 ## 求值顺序
 
 ```text
 1. 解析 owner_kind（external_city | player_mobile_city | district_neutral | district_player）
 2. 若 player_mobile_city → 应用 mobile_city_mode 修饰 → 返回
-3. 若 district_neutral → 应用废墟权限规则（**已定**：中立城区完全沿用废墟规则，sy-34 分项⑧）→ 返回
+3. 若 district_neutral（无归属城区，`district_ownership=neutral`）
+   → 查「中立城区权限子表」→ allow / deny
+   → 叠加 is_ruin 修饰（子表 allow 但 is_ruin=true → deny，毁时人口迁入/设施入口禁用）
+   → 返回
 4. 若 district_player（接管完成或效忠划归，district_ownership=player）→ 按玩家资产求值（同玩家城区）→ 返回
 5. 解析主控制态 city_control_state（按优先级链：效忠 > 未效忠/沦陷 > 未招募/已脱离）
 6. 查 city_capability_flags 基表 → allow | deny | conditional
@@ -297,7 +322,7 @@
 | T-03 | 未效忠 | `RecruitedUnloyal` | 管理面板手动出库 | **deny** |
 | T-04 | 未效忠 + 相连 | `RecruitedUnloyal` + `topology_connected_to_player` | 周总结扣粮 | 玩家池优先；不足走封存 |
 | T-05 | 未效忠 + 未相连 | `RecruitedUnloyal` | 周总结扣粮 | 封存回退；玩家池不强制 |
-| T-06 | 未效忠 | `RecruitedUnloyal` | 主动连接玩家城 | **deny** |
+| T-06 | 未效忠 | `RecruitedUnloyal` | 主动连接玩家城 | **allow**；城区可接入玩家移动城市拓扑 |
 | T-07 | 未效忠 | `RecruitedUnloyal` | 新建造设施 | **deny**；修复既有 **allow** |
 | T-08 | 未效忠 | `RecruitedUnloyal` | 势力城内归属转化 | **deny** |
 | T-09 | 废墟 × 未效忠 | `RecruitedUnloyal` + `is_ruin` | 迁出居民 | **deny**（招募优先） |
@@ -306,7 +331,7 @@
 | T-12 | 脱离 | `Detached` | 玩家打开 CMS | **deny**；AI 恢复调度 |
 | T-13 | 沦陷互斥 | 先 `RecruitedUnloyal` | 触发城区占领 | **不可**并存；保持招募态 |
 | T-14 | 接管后玩家资产 | `district_ownership=player`（接管完成） | 玩家经营该城区（资源、设施等） | **allow**（按玩家城区规则求值；人口归属不变仍受限） |
-| T-15 | 关系结算前 | `RecruitedUnloyal` + `relationship_pending_detach` | 当回合拆解 | **allow**；下回合脱离 |
+| T-15 | 关系结算前 | `RecruitedUnloyal` + `relationship_pending_detach` | 当回合连接城区 | **allow**；下回合脱离 |
 | T-16 | 贸易旁路 | `RecruitedUnloyal` | 停泊面对面贸易 | **deny** |
 | T-17 | 商队 | `ExternalNeutral`，**R ≥ 0** | 领袖页成交 | 自动编组；**不可**手动建商队 |
 | T-18 | 4 人降 1 | `RecruitedUnloyal` | 外部城编组减员 4 人 | 组织级池降 1 关系 |
@@ -329,7 +354,7 @@
 
 - [ ] `city_capability_flag_defs.csv` 落盘并与 SO 导入管线对接
 - [ ] `CityCapabilityService` 单元测试覆盖上表 T-01～T-32
-- [ ] 航行态打开 CMS 是否只读（sy-19 / sy-23 交叉）
+- [x] 航行态打开 CMS 是否只读（sy-19 / sy-23 交叉）：**已定**——航行态仅阻断精密工作，CMS 为静态配置面板，航行中完全可用、不设只读（2026-07-19）。
 
 ## 修订记录
 
@@ -339,3 +364,4 @@
 | 2026-07-10 | 0.0.2 | 废墟失能修饰；Occupied 改为废墟+占格；`occupation_trigger` 字段雏形；T-23～27 |
 | 2026-07-16 | 0.0.3 | **sy-34 大幅闭合**：Occupied 替换为 Surrendered（沦陷城市级状态）；占领重定义为城区级工作（`claim_district` work_type）；`hostile_ruin_occupation_ready` 替换为 `leader_district_claimed`；中立城区以 `district_ownership=neutral` 标识并**完全沿用废墟规则**（分项⑧闭合）；沦陷不参与经营 gate（分项⑨闭合，T-31/T-32 更新）；`base_workload` 已定 **2**（宣称占领 / 接管均 2 回合）；新增 T-30～T-32 测试项 |
 | 2026-07-16 | 0.1.0 | **sy-34 分项⑪闭合（全部闭合）**：废止 `Takeover` 城市级枚举——接管后城区写 `district_ownership=player`，**视为玩家直接资产**，资源与经营 gate 按玩家城区规则求值；各矩阵移除 Takeover 列；沦陷列按分项⑨对齐（玩家操作入口一律 ✗，仅 `turn.ai_schedule` 保留非战斗调度 △）；求值顺序新增 `district_player` 分支；T-14 更新为接管后玩家资产用例 |
+| 2026-07-20 | 0.2.0 | **sy-30 对齐**：新增「中立城区权限子表」节——无归属城区不占城市控制态枚举、以独立子表表达权限（6 个 allow 入口 + 其余 deny）；废止求值顺序第 3 步旧口径「沿用废墟规则」（归属与废墟是正交维度）。主矩阵 `RecruitedUnloyal` 列修正 6 项：`topo.connect/separate/reconnect` ✗→✓（可链接）、`struct.dismantle` ✓→✗（资源不共享）、`pop.residential_move_in` ✓→✗（人口锁定）。测试用例 T-06 更新为 allow、T-15 改用连接操作 |
